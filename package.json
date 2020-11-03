@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@salesforce-ux/design-system": "^2.13.7"
+  }
+}
