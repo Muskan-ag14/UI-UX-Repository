@@ -1,24 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Heebo&display=swap');
-
 body {
   font-family: 'Heebo', sans-serif;
   font-weight: normal;
   background-color: #f7f7f7;
+}
+.color-white {
+  color: rgb(255, 255, 255);
+}
+.font-size-16 {
+  font-size: 16px;
+}
+.button-wh {
+  height: 36px;
+  width: 200px;
 }
 .header-background {
   position: static !important;
 }
 .header-height {
   background: rgb(48, 51, 61);
-  border-radius: 0px;
   height: 120px;
 }
 .header-link-text {
-  color: rgb(255, 255, 255);
-  font-size: 16px;
   font-weight: 500;
-  line-height: 22px;
-  text-align: center;
 }
 .media__img img {
   width: 90px;
@@ -26,14 +30,11 @@ body {
   border-radius: 50%;
 }
 .media__body-text {
-  color: rgb(255, 255, 255);
   font-size: 24px;
   position: relative;
   top: 15px;
 }
 .media__body_subheading {
-  font-size: 16px;
-  line-height: 22px;
   position: relative;
   top: -10px;
 }
@@ -46,14 +47,12 @@ body {
 .link_m-right {
   margin-right: 80px;
 }
-
 /* alert */
 .alert_position-sticky {
   position: sticky;
   top: 0px;
   z-index: 500;
 }
-
 .alert-theme {
   background: rgb(247, 152, 28);
   border-radius: 0px;
@@ -61,8 +60,6 @@ body {
 }
 .alert-icon_text {
   color: rgb(53, 64, 82);
-  font-size: 16px;
-  line-height: 22px;
   margin-left: -30px;
   position: relative;
   top: 5px;
@@ -72,31 +69,20 @@ body {
 }
 .button-viewmore {
   background: rgb(255, 255, 255);
-  border-radius: 0px;
   border: 1px solid rgb(13, 60, 200);
-  height: 36px;
-  width: 200px;
+
   text-decoration: none !important;
   color: rgb(13, 60, 200) !important;
-  font-size: 16px;
-  line-height: 22px;
-  text-align: center;
 }
-
 .main-section {
-  margin-top: 40px;
-  margin-left: 100px;
-  margin-right: 100px;
+  margin: 40px 100px auto 100px;
 }
 .section-heading {
   color: rgb(53, 64, 82);
   font-size: 40px;
-  line-height: 50px;
 }
 .section-subheading {
   color: rgb(127, 143, 164);
-  font-size: 16px;
-  line-height: 22px;
   margin-bottom: 30px;
 }
 .section-main-btn {
@@ -109,10 +95,6 @@ body {
   border: 1px solid rgba(0, 0, 0, 0.1);
   height: 36px;
   width: 307px;
-  color: rgb(255, 255, 255);
-  font-size: 16px;
-  line-height: 22px;
-  text-align: center;
 }
 .tabs_bgcolor {
   background-color: #f7f7f7;
@@ -120,7 +102,6 @@ body {
 .tab-text li a {
   margin: 30px 22px 20px;
   color: rgb(69, 79, 87);
-  font-size: 16px;
   font-weight: bold;
   height: 22px;
   line-height: 22px;
@@ -154,38 +135,19 @@ body {
 }
 .error-text {
   color: rgb(248, 83, 89);
-  font-size: 16px;
-  height: 22px;
-  line-height: 22px;
 }
 .card-address-text {
   color: rgb(53, 64, 82);
-  font-size: 16px;
-  line-height: 22px;
 }
 .card-button_filled {
   background: rgb(71, 158, 235);
   border: none;
-  border-radius: 0px;
-  height: 36px;
-  width: 200px;
-  color: rgb(255, 255, 255);
-  font-size: 16px;
-  line-height: 22px;
-  text-align: center;
 }
 .card-button_unfilled {
   background: rgb(255, 255, 255);
-  border-radius: 0px;
   border: 1px solid rgb(13, 60, 200);
-  height: 36px;
-  width: 200px;
   color: rgb(13, 60, 200);
-  font-size: 16px;
-  line-height: 22px;
-  text-align: center;
 }
-
 .icon_color-red {
   fill: var(--sds-c-icon-color-foreground, rgb(248, 83, 89)) !important;
 }
@@ -203,16 +165,13 @@ body {
 }
 .card-text-2 {
   color: rgb(247, 152, 28);
-  font-size: 16px;
   height: 24px;
   text-align: right;
 }
 .site-text {
   color: rgb(53, 64, 82);
-  font-size: 16px;
   font-weight: bold;
   height: 22px;
-  line-height: 22px;
   text-align: right;
 }
 .table-style {
@@ -223,7 +182,6 @@ body {
 .table-style tr {
   height: 50px;
 }
-
 .table-heading {
   color: rgb(53, 64, 82);
   font-size: 12px;
@@ -233,8 +191,6 @@ body {
 }
 .table-row-text {
   color: rgb(53, 64, 82);
-  font-size: 16px;
-  line-height: 22px;
 }
 .thead_bgcolor {
   background: rgba(13, 60, 200, 0.05) !important;
@@ -249,8 +205,6 @@ body {
 }
 .grid-text {
   background: rgb(48, 51, 61);
-  border-radius: 0px;
-  color: rgb(255, 255, 255);
   font-size: 12px;
   letter-spacing: 0.55px;
   height: 40px;

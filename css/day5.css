@@ -5,18 +5,18 @@ html {
   font-family: 'Work Sans', sans-serif;
 }
 .table-container {
-  margin: 63px 100px 62px 100px;
+  margin: 3rem auto;
   background: rgb(255, 255, 255);
   border-radius: 3px;
   box-shadow: 2px 2px 30px 2px rgba(0, 0, 0, 0.08);
-  height: 756px;
+  min-height: 756px;
   position: relative;
+  width: 80%;
 }
 .table-style {
-  width: 1160px;
-  position: absolute;
-  left: 40px;
-  right: -30px;
+  max-width: 80em;
+  width: 100% !important;
+  margin: 0 auto;
 }
 .img-rounded {
   width: 30px;
@@ -41,18 +41,14 @@ thead > tr > th {
 thead > tr > th > div {
   color: rgb(146, 146, 146);
   font-size: 14px;
-  font-weight: normal;
   letter-spacing: 0px;
   padding: 10px;
 }
 tbody > tr > th > div {
   color: rgb(48, 48, 48) !important;
-  font-family: WorkSans-Regular;
   font-size: 14px;
-  font-weight: normal;
   height: 16px;
   letter-spacing: 0px;
-  width: 193px;
 }
 .tr_align-right {
   text-align: right !important;
