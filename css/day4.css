@@ -14,6 +14,15 @@ body {
   height: 36px;
   width: 200px;
 }
+.p-left-100 {
+  padding-left: 100px;
+}
+.p-right-100 {
+  padding-right: 80px;
+}
+.m-top-27 {
+  margin-top: 11px;
+}
 .header-background {
   position: static !important;
 }
@@ -70,7 +79,6 @@ body {
 .button-viewmore {
   background: rgb(255, 255, 255);
   border: 1px solid rgb(13, 60, 200);
-
   text-decoration: none !important;
   color: rgb(13, 60, 200) !important;
 }
@@ -91,7 +99,6 @@ body {
     rgb(13, 60, 200) 0%,
     rgb(4, 41, 181) 100%
   );
-  border-radius: 0px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   height: 36px;
   width: 307px;
@@ -105,15 +112,13 @@ body {
   font-weight: bold;
   height: 22px;
   line-height: 22px;
-  text-align: center;
 }
 .tab-heading {
-  color: rgb(13, 60, 200);
   font-size: 24px;
+  color: rgb(13, 60, 200);
 }
 .tab-selector::after {
   border: 2px solid rgb(28, 73, 186);
-  height: 2px;
 }
 .tab-inactive-text {
   color: rgb(127, 143, 164) !important;
@@ -149,7 +154,7 @@ body {
   color: rgb(13, 60, 200);
 }
 .icon_color-red {
-  fill: var(--sds-c-icon-color-foreground, rgb(248, 83, 89)) !important;
+  fill: rgb(248, 83, 89) !important;
 }
 .card-text,
 .error-text,
@@ -158,21 +163,14 @@ body {
 }
 .card-text-1 {
   color: rgb(127, 143, 164);
-  font-size: 12px;
-  height: 18px;
   letter-spacing: 0.55px;
-  text-align: right;
 }
 .card-text-2 {
   color: rgb(247, 152, 28);
-  height: 24px;
-  text-align: right;
 }
 .site-text {
   color: rgb(53, 64, 82);
   font-weight: bold;
-  height: 22px;
-  text-align: right;
 }
 .table-style {
   background: rgb(255, 255, 255);
@@ -184,10 +182,8 @@ body {
 }
 .table-heading {
   color: rgb(53, 64, 82);
-  font-size: 12px;
   font-weight: 500;
   letter-spacing: 0.55px;
-  height: 18px;
 }
 .table-row-text {
   color: rgb(53, 64, 82);
@@ -197,7 +193,6 @@ body {
 }
 .progress-text {
   color: rgb(127, 143, 164);
-  font-size: 12px;
   letter-spacing: 0.55px;
 }
 .mtx-heading {
@@ -205,20 +200,9 @@ body {
 }
 .grid-text {
   background: rgb(48, 51, 61);
-  font-size: 12px;
   letter-spacing: 0.55px;
-  height: 40px;
 }
 .link_color-white a {
   color: rgb(255, 255, 255);
   margin: 0 20px;
-}
-.p-left-100 {
-  padding-left: 100px;
-}
-.p-right-100 {
-  padding-right: 80px;
-}
-.m-top-27 {
-  margin-top: 11px;
 }
