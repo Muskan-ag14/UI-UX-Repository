@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Day 5</title>
+    <link
+      rel="stylesheet"
+      href="../salesforce-lightning-design-system-2.13.7/assets/styles/salesforce-lightning-design-system.min.css"
+    />
+    <link rel="stylesheet" href="../css/day5.css" />
+  </head>
+  <body>
+    <div class="table-container">
+      <table class="slds-table slds-table_cell-buffer table-style">
+        <thead class="">
+          <tr class="slds-line-height_reset slds-text-align--left">
+            <th class="" scope="col" style="width: 6%">
+              <div class="slds-truncate" title="Headshot"></div>
+            </th>
+            <th class="" scope="col" style="width: 30%">
+              <div class="slds-truncate" style="text-align: left" title="Name">
+                Name
+              </div>
+            </th>
+            <th class="" scope="col">
+              <div class="slds-truncate" title="Total Contribution">
+                Total Contribution
+              </div>
+            </th>
+            <th class="" scope="col">
+              <div class="slds-truncate" title="Total Distributions">
+                Total Distributions
+              </div>
+            </th>
+            <th class="" scope="col">
+              <div class="slds-truncate" title="Total Balance">
+                Total Balance
+              </div>
+            </th>
+            <th class="" scope="col" style="width: 8%">
+              <div class="slds-truncate" title="Details">Details</div>
+            </th>
+            <th class="" scope="col" style="width: 2%">
+              <div class="slds-truncate" title="View More"></div>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="slds-hint-parent">
+            <th data-label="Headshot" scope="row">
+              <div
+                class="slds-truncate img-rounded slds-m-around--x-small"
+                title="Headshot"
+              >
+                <img src="../images/people1.jpeg" />
+              </div>
+            </th>
+            <td data-label="Name">
+              <div class="slds-truncate" title="Name">Martha Nielson</div>
+            </td>
+            <td data-label="Total Contribution">
+              <div class="slds-truncate" title="Total Contribution">
+                $ 821,243
+              </div>
+            </td>
+            <td data-label="Total Distributions">
+              <div class="slds-truncate" title="Total Distributions">
+                $ 821,243
+              </div>
+            </td>
+            <td data-label="Total Balance">
+              <div class="slds-truncate" title="Total Balance">$ 821,243</div>
+            </td>
+            <td data-label="Amount">
+              <div class="slds-truncate view_text" title="$25k">
+                <a href="" tabindex="-1"
+                  ><span
+                    class="slds-icon_container slds-icon-utility-announcement"
+                    title="Description of icon when needed"
+                  >
+                    <svg
+                      class="slds-icon slds-icon-text-default slds-icon--x-small icon_style"
+                      aria-hidden="true"
+                    >
+                      <use
+                        xlink:href="../salesforce-lightning-design-system-2.13.7/assets/icons/utility-sprite/svg/symbols.svg#open"
+                      ></use>
+                    </svg>
+                    <span class="slds-assistive-text">View More</span>
+                  </span>
+                  View</a
+                >
+              </div>
+            </td>
+            <td data-label="Contact">
+              <div
+                class="slds-truncate tr_align-right"
+                title="jrogers@cloudhub.com"
+              >
+                <a href="javascript:void(0);" tabindex="-1"
+                  ><span
+                    class="slds-icon_container slds-icon-utility-announcement"
+                    title="Description of icon when needed"
+                  >
+                    <svg
+                      class="slds-icon slds-icon-text-default slds-icon--x-small"
+                      aria-hidden="true"
+                    >
+                      <use
+                        xlink:href="../salesforce-lightning-design-system-2.13.7/assets/icons/utility-sprite/svg/symbols.svg#threedots"
+                      ></use>
+                    </svg>
+                    <span class="slds-assistive-text">View More</span>
+                  </span></a
+                >
+              </div>
+            </td>
+          </tr>
+          <tr class="slds-hint-parent">
+            <th data-label="Headshot" scope="row">
+              <div
+                class="slds-truncate img-rounded slds-m-around--x-small"
+                title="Headshot"
+              >
+                <img src="../images/people2.jpeg" width="50" height="50" />
+              </div>
+            </th>
+            <td data-label="Name">
+              <div class="slds-truncate" title="Name">Hannah Kahnwald</div>
+            </td>
+            <td data-label="Total Contribution">
+              <div class="slds-truncate" title="Total Contribution">
+                $ 821,243
+              </div>
+            </td>
+            <td data-label="Total Distributions">
+              <div class="slds-truncate" title="Total Distributions">
+                $ 821,243
+              </div>
+            </td>
+            <td data-label="Total Balance">
+              <div class="slds-truncate" title="Total Balance">$ 821,243</div>
+            </td>
+            <td data-label="Amount">
+              <div class="slds-truncate view_text" title="$25k">
+                <a href="" tabindex="-1"
+                  ><span
+                    class="slds-icon_container slds-icon-utility-announcement"
+                    title="Description of icon when needed"
+                  >
+                    <svg
+                      class="slds-icon slds-icon-text-default slds-icon--x-small icon_style"
+                      aria-hidden="true"
+                    >
+                      <use
+                        xlink:href="../salesforce-lightning-design-system-2.13.7/assets/icons/utility-sprite/svg/symbols.svg#open"
+                      ></use>
+                    </svg>
+                    <span class="slds-assistive-text">View More</span>
+                  </span>
+                  View</a
+                >
+              </div>
+            </td>
+            <td data-label="Contact">
+              <div
+                class="slds-truncate tr_align-right"
+                title="jrogers@cloudhub.com"
+              >
+                <a href="javascript:void(0);" tabindex="-1"
+                  ><span
+                    class="slds-icon_container slds-icon-utility-announcement"
+                    title="Description of icon when needed"
+                  >
+                    <svg
+                      class="slds-icon slds-icon-text-default slds-icon--x-small"
+                      aria-hidden="true"
+                    >
+                      <use
+                        xlink:href="../salesforce-lightning-design-system-2.13.7/assets/icons/utility-sprite/svg/symbols.svg#threedots"
+                      ></use>
+                    </svg>
+                    <span class="slds-assistive-text">View More</span>
+                  </span></a
+                >
+              </div>
+            </td>
+          </tr>
+          <tr class="slds-hint-parent">
+            <th data-label="Headshot" scope="row">
+              <div
+                class="slds-truncate img-rounded slds-m-around--x-small"
+                title="Headshot"
+              >
+                <img src="../images/people3.jpeg" width="50" height="50" />
+              </div>
+            </th>
+            <td data-label="Name">
+              <div class="slds-truncate" title="Name">Leonard Hofstador</div>
+            </td>
+            <td data-label="Total Contribution">
+              <div class="slds-truncate" title="Total Contribution">
+                $ 821,243
+              </div>
+            </td>
+            <td data-label="Total Distributions">
+              <div class="slds-truncate" title="Total Distributions">
+                $ 821,243
+              </div>
+            </td>
+            <td data-label="Total Balance">
+              <div class="slds-truncate" title="Total Balance">$ 821,243</div>
+            </td>
+            <td data-label="Amount">
+              <div class="slds-truncate view_text" title="$25k">
+                <a href="" tabindex="-1"
+                  ><span
+                    class="slds-icon_container slds-icon-utility-announcement"
+                    title="Description of icon when needed"
+                  >
+                    <svg
+                      class="slds-icon slds-icon-text-default slds-icon--x-small icon_style"
+                      aria-hidden="true"
+                    >
+                      <use
+                        xlink:href="../salesforce-lightning-design-system-2.13.7/assets/icons/utility-sprite/svg/symbols.svg#open"
+                      ></use>
+                    </svg>
+                    <span class="slds-assistive-text">View More</span>
+                  </span>
+                  View</a
+                >
+              </div>
+            </td>
+            <td data-label="Contact">
+              <div
+                class="slds-truncate tr_align-right"
+                title="jrogers@cloudhub.com"
+              >
+                <a href="javascript:void(0);" tabindex="-1"
+                  ><span
+                    class="slds-icon_container slds-icon-utility-announcement"
+                    title="Description of icon when needed"
+                  >
+                    <svg
+                      class="slds-icon slds-icon-text-default slds-icon--x-small"
+                      aria-hidden="true"
+                    >
+                      <use
+                        xlink:href="../salesforce-lightning-design-system-2.13.7/assets/icons/utility-sprite/svg/symbols.svg#threedots"
+                      ></use>
+                    </svg>
+                    <span class="slds-assistive-text">View More</span>
+                  </span></a
+                >
+              </div>
+            </td>
+          </tr>
+          <tr class="slds-hint-parent">
+            <th data-label="Headshot" scope="row">
+              <div
+                class="slds-truncate img-rounded slds-m-around--x-small"
+                title="Headshot"
+              >
+                <img src="../images/people1.jpeg" width="50" height="50" />
+              </div>
+            </th>
+            <td data-label="Name">
+              <div class="slds-truncate" title="Name">Martha Nielson</div>
+            </td>
+            <td data-label="Total Contribution">
+              <div class="slds-truncate" title="Total Contribution">
+                $ 821,243
+              </div>
+            </td>
+            <td data-label="Total Distributions">
+              <div class="slds-truncate" title="Total Distributions">
+                $ 821,243
+              </div>
+            </td>
+            <td data-label="Total Balance">
+              <div class="slds-truncate" title="Total Balance">$ 821,243</div>
+            </td>
+            <td data-label="Amount">
+              <div class="slds-truncate view_text" title="$25k">
+                <a href="" tabindex="-1"
+                  ><span
+                    class="slds-icon_container slds-icon-utility-announcement"
+                    title="Description of icon when needed"
+                  >
+                    <svg
+                      class="slds-icon slds-icon-text-default slds-icon--x-small icon_style"
+                      aria-hidden="true"
+                    >
+                      <use
+                        xlink:href="../salesforce-lightning-design-system-2.13.7/assets/icons/utility-sprite/svg/symbols.svg#open"
+                      ></use>
+                    </svg>
+                    <span class="slds-assistive-text">View More</span>
+                  </span>
+                  View</a
+                >
+              </div>
+            </td>
+            <td data-label="Contact">
+              <div
+                class="slds-truncate tr_align-right"
+                title="jrogers@cloudhub.com"
+              >
+                <a href="javascript:void(0);" tabindex="-1"
+                  ><span
+                    class="slds-icon_container slds-icon-utility-announcement"
+                    title="Description of icon when needed"
+                  >
+                    <svg
+                      class="slds-icon slds-icon-text-default slds-icon--x-small"
+                      aria-hidden="true"
+                    >
+                      <use
+                        xlink:href="../salesforce-lightning-design-system-2.13.7/assets/icons/utility-sprite/svg/symbols.svg#threedots"
+                      ></use>
+                    </svg>
+                    <span class="slds-assistive-text">View More</span>
+                  </span></a
+                >
+              </div>
+            </td>
+          </tr>
+          <tr class="slds-hint-parent">
+            <th data-label="Headshot" scope="row">
+              <div
+                class="slds-truncate img-rounded slds-m-around--x-small"
+                title="Headshot"
+              >
+                <img src="../images/people2.jpeg" width="50" height="50" />
+              </div>
+            </th>
+            <td data-label="Name">
+              <div class="slds-truncate" title="Name">Hannah Kahnwald</div>
+            </td>
+            <td data-label="Total Contribution">
+              <div class="slds-truncate" title="Total Contribution">
+                $ 821,243
+              </div>
+            </td>
+            <td data-label="Total Distributions">
+              <div class="slds-truncate" title="Total Distributions">
+                $ 821,243
+              </div>
+            </td>
+            <td data-label="Total Balance">
+              <div class="slds-truncate" title="Total Balance">$ 821,243</div>
+            </td>
+            <td data-label="Amount">
+              <div class="slds-truncate view_text" title="$25k">
+                <a href="" tabindex="-1"
+                  ><span
+                    class="slds-icon_container slds-icon-utility-announcement"
+                    title="Description of icon when needed"
+                  >
+                    <svg
+                      class="slds-icon slds-icon-text-default slds-icon--x-small icon_style"
+                      aria-hidden="true"
+                    >
+                      <use
+                        xlink:href="../salesforce-lightning-design-system-2.13.7/assets/icons/utility-sprite/svg/symbols.svg#open"
+                      ></use>
+                    </svg>
+                    <span class="slds-assistive-text">View More</span>
+                  </span>
+                  View</a
+                >
+              </div>
+            </td>
+            <td data-label="Contact">
+              <div
+                class="slds-truncate tr_align-right"
+                title="jrogers@cloudhub.com"
+              >
+                <a href="javascript:void(0);" tabindex="-1"
+                  ><span
+                    class="slds-icon_container slds-icon-utility-announcement"
+                    title="Description of icon when needed"
+                  >
+                    <svg
+                      class="slds-icon slds-icon-text-default slds-icon--x-small"
+                      aria-hidden="true"
+                    >
+                      <use
+                        xlink:href="../salesforce-lightning-design-system-2.13.7/assets/icons/utility-sprite/svg/symbols.svg#threedots"
+                      ></use>
+                    </svg>
+                    <span class="slds-assistive-text">View More</span>
+                  </span></a
+                >
+              </div>
+            </td>
+          </tr>
+          <tr class="slds-hint-parent">
+            <th data-label="Headshot" scope="row">
+              <div
+                class="slds-truncate img-rounded slds-m-around--x-small"
+                title="Headshot"
+              >
+                <img src="../images/people3.jpeg" width="50" height="50" />
+              </div>
+            </th>
+            <td data-label="Name">
+              <div class="slds-truncate" title="Name">Leonard Hofstador</div>
+            </td>
+            <td data-label="Total Contribution">
+              <div class="slds-truncate" title="Total Contribution">
+                $ 821,243
+              </div>
+            </td>
+            <td data-label="Total Distributions">
+              <div class="slds-truncate" title="Total Distributions">
+                $ 821,243
+              </div>
+            </td>
+            <td data-label="Total Balance">
+              <div class="slds-truncate" title="Total Balance">$ 821,243</div>
+            </td>
+            <td data-label="Amount">
+              <div class="slds-truncate view_text" title="$25k">
+                <a href="" tabindex="-1"
+                  ><span
+                    class="slds-icon_container slds-icon-utility-announcement"
+                    title="Description of icon when needed"
+                  >
+                    <svg
+                      class="slds-icon slds-icon-text-default slds-icon--x-small icon_style"
+                      aria-hidden="true"
+                    >
+                      <use
+                        xlink:href="../salesforce-lightning-design-system-2.13.7/assets/icons/utility-sprite/svg/symbols.svg#open"
+                      ></use>
+                    </svg>
+                    <span class="slds-assistive-text">View More</span>
+                  </span>
+                  View</a
+                >
+              </div>
+            </td>
+            <td data-label="Contact">
+              <div
+                class="slds-truncate tr_align-right"
+                title="jrogers@cloudhub.com"
+              >
+                <a href="javascript:void(0);" tabindex="-1"
+                  ><span
+                    class="slds-icon_container slds-icon-utility-announcement"
+                    title="Description of icon when needed"
+                  >
+                    <svg
+                      class="slds-icon slds-icon-text-default slds-icon--x-small"
+                      aria-hidden="true"
+                    >
+                      <use
+                        xlink:href="../salesforce-lightning-design-system-2.13.7/assets/icons/utility-sprite/svg/symbols.svg#threedots"
+                      ></use>
+                    </svg>
+                    <span class="slds-assistive-text">View More</span>
+                  </span></a
+                >
+              </div>
+            </td>
+          </tr>
+          <tr class="slds-hint-parent">
+            <th data-label="Headshot" scope="row">
+              <div
+                class="slds-truncate img-rounded slds-m-around--x-small"
+                title="Headshot"
+              >
+                <img src="../images/people1.jpeg" width="50" height="50" />
+              </div>
+            </th>
+            <td data-label="Name">
+              <div class="slds-truncate" title="Name">Martha Nielson</div>
+            </td>
+            <td data-label="Total Contribution">
+              <div class="slds-truncate" title="Total Contribution">
+                $ 821,243
+              </div>
+            </td>
+            <td data-label="Total Distributions">
+              <div class="slds-truncate" title="Total Distributions">
+                $ 821,243
+              </div>
+            </td>
+            <td data-label="Total Balance">
+              <div class="slds-truncate" title="Total Balance">$ 821,243</div>
+            </td>
+            <td data-label="Amount">
+              <div class="slds-truncate view_text" title="$25k">
+                <a href="" tabindex="-1"
+                  ><span
+                    class="slds-icon_container slds-icon-utility-announcement"
+                    title="Description of icon when needed"
+                  >
+                    <svg
+                      class="slds-icon slds-icon-text-default slds-icon--x-small icon_style"
+                      aria-hidden="true"
+                    >
+                      <use
+                        xlink:href="../salesforce-lightning-design-system-2.13.7/assets/icons/utility-sprite/svg/symbols.svg#open"
+                      ></use>
+                    </svg>
+                    <span class="slds-assistive-text">View More</span>
+                  </span>
+                  View</a
+                >
+              </div>
+            </td>
+            <td data-label="Contact">
+              <div
+                class="slds-truncate tr_align-right"
+                title="jrogers@cloudhub.com"
+              >
+                <a href="javascript:void(0);" tabindex="-1"
+                  ><span
+                    class="slds-icon_container slds-icon-utility-announcement"
+                    title="Description of icon when needed"
+                  >
+                    <svg
+                      class="slds-icon slds-icon-text-default slds-icon--x-small"
+                      aria-hidden="true"
+                    >
+                      <use
+                        xlink:href="../salesforce-lightning-design-system-2.13.7/assets/icons/utility-sprite/svg/symbols.svg#threedots"
+                      ></use>
+                    </svg>
+                    <span class="slds-assistive-text">View More</span>
+                  </span></a
+                >
+              </div>
+            </td>
+          </tr>
+          <tr class="slds-hint-parent">
+            <th data-label="Headshot" scope="row">
+              <div
+                class="slds-truncate img-rounded slds-m-around--x-small"
+                title="Headshot"
+              >
+                <img src="../images/people2.jpeg" width="50" height="50" />
+              </div>
+            </th>
+            <td data-label="Name">
+              <div class="slds-truncate" title="Name">Hannah Kahnwald</div>
+            </td>
+            <td data-label="Total Contribution">
+              <div class="slds-truncate" title="Total Contribution">
+                $ 821,243
+              </div>
+            </td>
+            <td data-label="Total Distributions">
+              <div class="slds-truncate" title="Total Distributions">
+                $ 821,243
+              </div>
+            </td>
+            <td data-label="Total Balance">
+              <div class="slds-truncate" title="Total Balance">$ 821,243</div>
+            </td>
+            <td data-label="Amount">
+              <div class="slds-truncate view_text" title="$25k">
+                <a href="" tabindex="-1"
+                  ><span
+                    class="slds-icon_container slds-icon-utility-announcement"
+                    title="Description of icon when needed"
+                  >
+                    <svg
+                      class="slds-icon slds-icon-text-default slds-icon--x-small icon_style"
+                      aria-hidden="true"
+                    >
+                      <use
+                        xlink:href="../salesforce-lightning-design-system-2.13.7/assets/icons/utility-sprite/svg/symbols.svg#open"
+                      ></use>
+                    </svg>
+                    <span class="slds-assistive-text">View More</span>
+                  </span>
+                  View</a
+                >
+              </div>
+            </td>
+            <td data-label="Contact">
+              <div
+                class="slds-truncate tr_align-right"
+                title="jrogers@cloudhub.com"
+              >
+                <a href="javascript:void(0);" tabindex="-1"
+                  ><span
+                    class="slds-icon_container slds-icon-utility-announcement"
+                    title="Description of icon when needed"
+                  >
+                    <svg
+                      class="slds-icon slds-icon-text-default slds-icon--x-small"
+                      aria-hidden="true"
+                    >
+                      <use
+                        xlink:href="../salesforce-lightning-design-system-2.13.7/assets/icons/utility-sprite/svg/symbols.svg#threedots"
+                      ></use>
+                    </svg>
+                    <span class="slds-assistive-text">View More</span>
+                  </span></a
+                >
+              </div>
+            </td>
+          </tr>
+          <tr class="slds-hint-parent">
+            <th data-label="Headshot" scope="row">
+              <div
+                class="slds-truncate img-rounded slds-m-around--x-small"
+                title="Headshot"
+              >
+                <img src="../images/people3.jpeg" width="50" height="50" />
+              </div>
+            </th>
+            <td data-label="Name">
+              <div class="slds-truncate" title="Name">Leonard Hofstador</div>
+            </td>
+            <td data-label="Total Contribution">
+              <div class="slds-truncate" title="Total Contribution">
+                $ 821,243
+              </div>
+            </td>
+            <td data-label="Total Distributions">
+              <div class="slds-truncate" title="Total Distributions">
+                $ 821,243
+              </div>
+            </td>
+            <td data-label="Total Balance">
+              <div class="slds-truncate" title="Total Balance">$ 821,243</div>
+            </td>
+            <td data-label="Amount">
+              <div class="slds-truncate view_text" title="$25k">
+                <a href="" tabindex="-1"
+                  ><span
+                    class="slds-icon_container slds-icon-utility-announcement"
+                    title="Description of icon when needed"
+                  >
+                    <svg
+                      class="slds-icon slds-icon-text-default slds-icon--x-small icon_style"
+                      aria-hidden="true"
+                    >
+                      <use
+                        xlink:href="../salesforce-lightning-design-system-2.13.7/assets/icons/utility-sprite/svg/symbols.svg#open"
+                      ></use>
+                    </svg>
+                    <span class="slds-assistive-text">View More</span>
+                  </span>
+                  View</a
+                >
+              </div>
+            </td>
+            <td data-label="Contact">
+              <div
+                class="slds-truncate tr_align-right"
+                title="jrogers@cloudhub.com"
+              >
+                <a href="javascript:void(0);" tabindex="-1"
+                  ><span
+                    class="slds-icon_container slds-icon-utility-announcement"
+                    title="Description of icon when needed"
+                  >
+                    <svg
+                      class="slds-icon slds-icon-text-default slds-icon--x-small"
+                      aria-hidden="true"
+                    >
+                      <use
+                        xlink:href="../salesforce-lightning-design-system-2.13.7/assets/icons/utility-sprite/svg/symbols.svg#threedots"
+                      ></use>
+                    </svg>
+                    <span class="slds-assistive-text">View More</span>
+                  </span></a
+                >
+              </div>
+            </td>
+          </tr>
+          <tr class="slds-hint-parent">
+            <th data-label="Headshot" scope="row">
+              <div
+                class="slds-truncate img-rounded slds-m-around--x-small"
+                title="Headshot"
+              >
+                <img src="../images/people3.jpeg" width="50" height="50" />
+              </div>
+            </th>
+            <td data-label="Name">
+              <div class="slds-truncate" title="Name">Leonard Hofstador</div>
+            </td>
+            <td data-label="Total Contribution">
+              <div class="slds-truncate" title="Total Contribution">
+                $ 821,243
+              </div>
+            </td>
+            <td data-label="Total Distributions">
+              <div class="slds-truncate" title="Total Distributions">
+                $ 821,243
+              </div>
+            </td>
+            <td data-label="Total Balance">
+              <div class="slds-truncate" title="Total Balance">$ 821,243</div>
+            </td>
+            <td data-label="Amount">
+              <div class="slds-truncate view_text" title="$25k">
+                <a href="" tabindex="-1"
+                  ><span
+                    class="slds-icon_container slds-icon-utility-announcement"
+                    title="Description of icon when needed"
+                  >
+                    <svg
+                      class="slds-icon slds-icon-text-default slds-icon--x-small icon_style"
+                      aria-hidden="true"
+                    >
+                      <use
+                        xlink:href="../salesforce-lightning-design-system-2.13.7/assets/icons/utility-sprite/svg/symbols.svg#open"
+                      ></use>
+                    </svg>
+                    <span class="slds-assistive-text">View More</span>
+                  </span>
+                  View</a
+                >
+              </div>
+            </td>
+            <td data-label="Contact">
+              <div
+                class="slds-truncate tr_align-right"
+                title="jrogers@cloudhub.com"
+              >
+                <a href="javascript:void(0);" tabindex="-1"
+                  ><span
+                    class="slds-icon_container slds-icon-utility-announcement"
+                    title="Description of icon when needed"
+                  >
+                    <svg
+                      class="slds-icon slds-icon-text-default slds-icon--x-small"
+                      aria-hidden="true"
+                    >
+                      <use
+                        xlink:href="../salesforce-lightning-design-system-2.13.7/assets/icons/utility-sprite/svg/symbols.svg#threedots"
+                      ></use>
+                    </svg>
+                    <span class="slds-assistive-text">View More</span>
+                  </span></a
+                >
+              </div>
+            </td>
+          </tr>
+          <tr class="slds-hint-parent">
+            <th data-label="Headshot" scope="row">
+              <div
+                class="slds-truncate img-rounded slds-m-around--x-small"
+                title="Headshot"
+              >
+                <img src="../images/people1.jpeg" width="50" height="50" />
+              </div>
+            </th>
+            <td data-label="Name">
+              <div class="slds-truncate" title="Name">Martha Nielson</div>
+            </td>
+            <td data-label="Total Contribution">
+              <div class="slds-truncate" title="Total Contribution">
+                $ 821,243
+              </div>
+            </td>
+            <td data-label="Total Distributions">
+              <div class="slds-truncate" title="Total Distributions">
+                $ 821,243
+              </div>
+            </td>
+            <td data-label="Total Balance">
+              <div class="slds-truncate" title="Total Balance">$ 821,243</div>
+            </td>
+            <td data-label="Amount">
+              <div class="slds-truncate view_text" title="$25k">
+                <a href="" tabindex="-1"
+                  ><span
+                    class="slds-icon_container slds-icon-utility-announcement"
+                    title="Description of icon when needed"
+                  >
+                    <svg
+                      class="slds-icon slds-icon-text-default slds-icon--x-small icon_style"
+                      aria-hidden="true"
+                    >
+                      <use
+                        xlink:href="../salesforce-lightning-design-system-2.13.7/assets/icons/utility-sprite/svg/symbols.svg#open"
+                      ></use>
+                    </svg>
+                    <span class="slds-assistive-text">View More</span>
+                  </span>
+                  View</a
+                >
+              </div>
+            </td>
+            <td data-label="Contact">
+              <div
+                class="slds-truncate tr_align-right"
+                title="jrogers@cloudhub.com"
+              >
+                <a href="javascript:void(0);" tabindex="-1"
+                  ><span
+                    class="slds-icon_container slds-icon-utility-announcement"
+                    title="Description of icon when needed"
+                  >
+                    <svg
+                      class="slds-icon slds-icon-text-default slds-icon--x-small"
+                      aria-hidden="true"
+                    >
+                      <use
+                        xlink:href="../salesforce-lightning-design-system-2.13.7/assets/icons/utility-sprite/svg/symbols.svg#threedots"
+                      ></use>
+                    </svg>
+                    <span class="slds-assistive-text">View More</span>
+                  </span></a
+                >
+              </div>
+            </td>
+          </tr>
+          <tr class="slds-hint-parent">
+            <th data-label="Headshot" scope="row">
+              <div
+                class="slds-truncate img-rounded slds-m-around--x-small"
+                title="Headshot"
+              >
+                <img src="../images/people2.jpeg" width="50" height="50" />
+              </div>
+            </th>
+            <td data-label="Name">
+              <div class="slds-truncate" title="Name">Hannah Kahnwald</div>
+            </td>
+            <td data-label="Total Contribution">
+              <div class="slds-truncate" title="Total Contribution">
+                $ 821,243
+              </div>
+            </td>
+            <td data-label="Total Distributions">
+              <div class="slds-truncate" title="Total Distributions">
+                $ 821,243
+              </div>
+            </td>
+            <td data-label="Total Balance">
+              <div class="slds-truncate" title="Total Balance">$ 821,243</div>
+            </td>
+            <td data-label="Amount">
+              <div class="slds-truncate view_text" title="$25k">
+                <a href="" tabindex="-1"
+                  ><span
+                    class="slds-icon_container slds-icon-utility-announcement"
+                    title="Description of icon when needed"
+                  >
+                    <svg
+                      class="slds-icon slds-icon-text-default slds-icon--x-small icon_style"
+                      aria-hidden="true"
+                    >
+                      <use
+                        xlink:href="../salesforce-lightning-design-system-2.13.7/assets/icons/utility-sprite/svg/symbols.svg#open"
+                      ></use>
+                    </svg>
+                    <span class="slds-assistive-text">View More</span>
+                  </span>
+                  View</a
+                >
+              </div>
+            </td>
+            <td data-label="Contact">
+              <div
+                class="slds-truncate tr_align-right"
+                title="jrogers@cloudhub.com"
+              >
+                <a href="javascript:void(0);" tabindex="-1"
+                  ><span
+                    class="slds-icon_container slds-icon-utility-announcement"
+                    title="Description of icon when needed"
+                  >
+                    <svg
+                      class="slds-icon slds-icon-text-default slds-icon--x-small"
+                      aria-hidden="true"
+                    >
+                      <use
+                        xlink:href="../salesforce-lightning-design-system-2.13.7/assets/icons/utility-sprite/svg/symbols.svg#threedots"
+                      ></use>
+                    </svg>
+                    <span class="slds-assistive-text">View More</span>
+                  </span></a
+                >
+              </div>
+            </td>
+          </tr>
+          <tr class="slds-hint-parent">
+            <th data-label="Headshot" scope="row">
+              <div
+                class="slds-truncate img-rounded slds-m-around--x-small"
+                title="Headshot"
+              >
+                <img src="../images/people3.jpeg" width="50" height="50" />
+              </div>
+            </th>
+            <td data-label="Name">
+              <div class="slds-truncate" title="Name">Leonard Hofstador</div>
+            </td>
+            <td data-label="Total Contribution">
+              <div class="slds-truncate" title="Total Contribution">
+                $ 821,243
+              </div>
+            </td>
+            <td data-label="Total Distributions">
+              <div class="slds-truncate" title="Total Distributions">
+                $ 821,243
+              </div>
+            </td>
+            <td data-label="Total Balance">
+              <div class="slds-truncate" title="Total Balance">$ 821,243</div>
+            </td>
+            <td data-label="Amount">
+              <div class="slds-truncate view_text" title="$25k">
+                <a href="" tabindex="-1"
+                  ><span
+                    class="slds-icon_container slds-icon-utility-announcement"
+                    title="Description of icon when needed"
+                  >
+                    <svg
+                      class="slds-icon slds-icon-text-default slds-icon--x-small icon_style"
+                      aria-hidden="true"
+                    >
+                      <use
+                        xlink:href="../salesforce-lightning-design-system-2.13.7/assets/icons/utility-sprite/svg/symbols.svg#open"
+                      ></use>
+                    </svg>
+                    <span class="slds-assistive-text">View More</span>
+                  </span>
+                  View</a
+                >
+              </div>
+            </td>
+            <td data-label="Contact">
+              <div
+                class="slds-truncate tr_align-right"
+                title="jrogers@cloudhub.com"
+              >
+                <a href="javascript:void(0);" tabindex="-1"
+                  ><span
+                    class="slds-icon_container slds-icon-utility-announcement"
+                    title="Description of icon when needed"
+                  >
+                    <svg
+                      class="slds-icon slds-icon-text-default slds-icon--x-small"
+                      aria-hidden="true"
+                    >
+                      <use
+                        xlink:href="../salesforce-lightning-design-system-2.13.7/assets/icons/utility-sprite/svg/symbols.svg#threedots"
+                      ></use>
+                    </svg>
+                    <span class="slds-assistive-text">View More</span>
+                  </span></a
+                >
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100&display=swap');
+html {
+  background-color: #fcfcfc !important;
+  box-sizing: border-box;
+  font-family: 'Work Sans', sans-serif;
+}
+.table-container {
+  margin: 3rem auto;
+  background: rgb(255, 255, 255);
+  border-radius: 3px;
+  box-shadow: 2px 2px 30px 2px rgba(0, 0, 0, 0.08);
+  min-height: 756px;
+  position: relative;
+  width: 80%;
+}
+.table-style {
+  max-width: 80em;
+  width: 100% !important;
+  margin: 0 auto;
+}
+.img-rounded {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+.view_text a {
+  color: rgb(0, 160, 255) !important;
+  text-decoration: none;
+}
+.icon_style {
+  transform: rotate(90deg);
+  fill: var(--sds-c-icon-color-foreground, rgb(0, 160, 255)) !important;
+  margin-right: 3px;
+}
+tbody > tr {
+  border-bottom: 1px solid #dddbda !important;
+}
+thead > tr > th {
+  background-color: #ffffff !important;
+}
+thead > tr > th > div {
+  color: rgb(146, 146, 146);
+  font-size: 14px;
+  letter-spacing: 0px;
+  padding: 10px;
+}
+tbody > tr > th > div {
+  color: rgb(48, 48, 48) !important;
+  font-size: 14px;
+  height: 16px;
+  letter-spacing: 0px;
+}
+.tr_align-right {
+  text-align: right !important;
+}
+
+@media (max-width: 855px) {
+  table,
+  tbody,
+  tr,
+  td {
+    display: block;
+  }
+}
