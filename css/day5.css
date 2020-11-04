@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
 html {
   background-color: #fcfcfc !important;
   box-sizing: border-box;
   font-family: 'Work Sans', sans-serif;
   font-size: 12px;
 }
-.font-16 {
+.font-size {
   font-size: 16px;
 }
 .color-light {
@@ -15,36 +15,76 @@ html {
   color: rgb(0, 160, 255);
 }
 .container {
-  margin: 3rem auto;
+  width: 85%;
+}
+.card-outer_style {
   background: rgb(255, 255, 255);
-  border-radius: 3px;
+  border: none;
+  border-radius: 0px;
   box-shadow: 2px 2px 30px 2px rgba(0, 0, 0, 0.08);
-  min-height: 756px;
-  position: relative;
-  width: 80%;
 }
 .headshot-size span img {
-  height: 110px;
-  width: 110px;
+  height: 8rem;
+  width: 8rem;
   border-radius: 50%;
 }
 .mobile-border_top {
   border-top: 1px solid rgba(151, 151, 151, 0.15);
 }
-.mobile-display_none {
-  display: none;
+.m-top-20 {
+  margin-top: 1.25rem;
+}
+.m-top-10 {
+  margin-top: 1rem;
+}
+.border-top {
+  border-top: 1px solid #dddbda !important;
 }
 @media (min-width: 1024px) {
+  html {
+    font-size: 14px;
+  }
+  .font-size {
+    font-size: 14px;
+  }
+  .m-top-20,
+  .m-top-10 {
+    margin-top: 0px;
+  }
+
+  .border-top {
+    border-top: none !important;
+  }
+  .container {
+    background: rgb(255, 255, 255);
+    border-radius: 0px;
+    box-shadow: 2px 2px 30px 2px rgba(0, 0, 0, 0.08);
+    width: 80%;
+    margin: 3rem auto;
+  }
+  .card-outer_style {
+    border-bottom: 1px solid #dddbda !important;
+    box-shadow: none;
+    padding-top: 0px !important;
+  }
+  .p-bottom-0 {
+    padding-bottom: 0px !important;
+    padding-top: 10px !important;
+  }
+  .card-border_none {
+    border-bottom: none !important;
+  }
   .desktop-display_none {
     display: none;
   }
-  .headshot-size span img {
-    height: 30px;
-    width: 30px;
-    border-radius: 50%;
+  .text_align-left {
+    display: flex !important;
+    justify-content: flex-start !important;
   }
-  .mobile-display_none {
-    display: inline;
+  .headshot-size span img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
   }
   .icon_style {
     transform: rotate(90deg);

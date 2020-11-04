@@ -6,13 +6,13 @@
   top: 0;
   right: 0;
   width: 30%;
-  height: 600px;
+  height: 570px;
 }
 
 .avatar_extra-large,
 .icon_extra-large {
-  width: 8rem;
-  height: 8rem;
+  width: 112px;
+  height: 112px;
 }
 
 .icon_color-gray {
