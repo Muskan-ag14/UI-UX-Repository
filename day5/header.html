@@ -3,27 +3,203 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <title>MINIMAL Handmade</title>
+    <title>Day 5</title>
     <link
       rel="stylesheet"
       href="../salesforce-lightning-design-system-2.13.7/assets/styles/salesforce-lightning-design-system.min.css"
     />
     <link rel="stylesheet" href="../css/day5.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+      .color-white {
+        color: rgb(48, 48, 48);
+      }
+      .font-size-16 {
+        font-size: 16px;
+      }
+
+      .header-background {
+        position: static !important;
+      }
+      .header-height {
+        background: rgb(252, 252, 252);
+        height: 90px;
+        box-shadow: 2px 2px 25px 2px rgba(0, 0, 0, 0.05);
+      }
+      .header-link-text {
+        font-weight: 500;
+      }
+      .media__img img {
+        width: 180px;
+        height: 70px;
+      }
+      .media__body_subheading {
+        position: relative;
+        top: -10px;
+      }
+      .header_border-none,
+      .header_border-none li {
+        border-left: none !important;
+      }
+      .sidebar-submenu {
+        display: none;
+      }
+      .demo-only {
+        background: linear-gradient(
+          -45deg,
+          rgb(239, 243, 248) 0%,
+          rgb(231, 246, 255) 100%
+        );
+      }
+
+      .cd-nav-trigger {
+        /* navigation trigger - visible on mobile devices only */
+        /* float: right; */
+        position: relative;
+        display: block;
+        width: 34px;
+        height: 44px;
+        /* hide text */
+        /* overflow: hidden;
+        white-space: nowrap;
+        color: transparent; */
+      }
+      .cd-nav-trigger span,
+      .cd-nav-trigger span::before,
+      .cd-nav-trigger span::after {
+        /* hamburger icon in CSS */
+        position: absolute;
+        display: inline-block;
+        height: 3px;
+        width: 24px;
+        background: rgb(48, 48, 48);
+      }
+      .cd-nav-trigger span {
+        /* line in the center */
+        position: absolute;
+        top: 50%;
+        right: 5px;
+        margin-top: -2px;
+        /* -webkit-transition: background 0.2s;
+        -moz-transition: background 0.2s; */
+        transition: rgb(48, 48, 48) 0.2s;
+      }
+      .cd-nav-trigger span::before,
+      .cd-nav-trigger span::after {
+        /* other 2 lines */
+        content: '';
+        right: 0;
+        /* Force Hardware Acceleration in WebKit */
+        /* -webkit-transform: translateZ(0);
+        -moz-transform: translateZ(0);
+        -ms-transform: translateZ(0);
+        -o-transform: translateZ(0); */
+        transform: translateZ(0);
+        /* -webkit-backface-visibility: hidden; */
+        backface-visibility: hidden;
+        /* -webkit-transform-origin: 0% 50%;
+        -moz-transform-origin: 0% 50%;
+        -ms-transform-origin: 0% 50%;
+        -o-transform-origin: 0% 50%; */
+        transform-origin: 0% 50%;
+        /* -webkit-transition: -webkit-transform 0.2s;
+        -moz-transition: -moz-transform 0.2s; */
+        transition: translateZ(0) 0.2s;
+      }
+      .cd-nav-trigger span::before {
+        /* menu icon top line */
+        top: -6px;
+      }
+      .cd-nav-trigger span::after {
+        /* menu icon bottom line */
+        top: 6px;
+      }
+      .cd-nav-trigger.nav-is-visible span {
+        /* hide line in the center */
+        background: rgba(255, 255, 255, 0);
+      }
+      .cd-nav-trigger.nav-is-visible span::before,
+      .cd-nav-trigger.nav-is-visible span::after {
+        /* keep visible other 2 lines */
+        background: rgb(48, 48, 48);
+      }
+      .cd-nav-trigger.nav-is-visible span::before {
+        /* -webkit-transform: translateX(4px) translateY(-3px) rotate(45deg);
+        -moz-transform: translateX(4px) translateY(-3px) rotate(45deg);
+        -ms-transform: translateX(4px) translateY(-3px) rotate(45deg);
+        -o-transform: translateX(4px) translateY(-3px) rotate(45deg); */
+        transform: translateX(4px) translateY(-3px) rotate(45deg);
+      }
+      .cd-nav-trigger.nav-is-visible span::after {
+        /* -webkit-transform: translateX(4px) translateY(2px) rotate(-45deg);
+        -moz-transform: translateX(4px) translateY(2px) rotate(-45deg);
+        -ms-transform: translateX(4px) translateY(2px) rotate(-45deg);
+        -o-transform: translateX(4px) translateY(2px) rotate(-45deg); */
+        transform: translateX(4px) translateY(2px) rotate(-45deg);
+      }
+      @media only screen and (min-width: 1023px) {
+        .cd-nav-trigger {
+          display: none;
+        }
+      }
+      .cd-side-nav {
+        position: absolute;
+        z-index: 1;
+        left: 0;
+        /* top: 0; */
+        width: 40%;
+        /* padding: 45px 0 0; */
+        background: linear-gradient(
+          -45deg,
+          rgb(239, 243, 248) 0%,
+          rgb(231, 246, 255) 100%
+        );
+        visibility: hidden;
+        opacity: 0;
+        min-height: 100vh;
+        overflow: hidden;
+        /* -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-transition: opacity 0.2s 0s, visibility 0s 0.2s;
+        -moz-transition: opacity 0.2s 0s, visibility 0s 0.2s; */
+        transition: opacity 0.2s 0s, visibility 0s 0.2s;
+      }
+      .cd-side-nav.nav-is-visible {
+        opacity: 1;
+        visibility: visible;
+        overflow: visible;
+        /* -webkit-overflow-scrolling: touch;
+        -webkit-transition: opacity 0.2s 0s, visibility 0s 0s;
+        -moz-transition: opacity 0.2s 0s, visibility 0s 0s; */
+        transition: opacity 0.2s 0s, visibility 0s 0s;
+        max-height: none;
+        /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); */
+      }
+
+      @media only screen and (min-width: 1024px) {
+        .cd-side-nav {
+          position: relative;
+          float: left;
+          top: auto;
+          width: 200px;
+          min-height: 100vh;
+          padding-top: 20px;
+          /* reset style */
+          visibility: visible;
+          opacity: 1;
+          /* overflow: visible; */
+          /* max-height: none; */
+        }
+      }
+    </style>
   </head>
   <body>
-    <!--
-        ----
-          -------- 1. HEADER -------- 
-        ----
-      -->
     <div class="slds-builder-header_container header-background">
       <header class="slds-builder-header header-height slds-p-around--large">
-        <!-- 1.1. hamburger icon -->
         <div class="slds-builder-header__item">
-          <a href="#" class="cd-nav-trigger"><span></span></a>
+          <a href="#0" class="cd-nav-trigger"><span></span></a>
         </div>
-        <!-- 1.2. logo -->
+
         <div class="slds-builder-header__item">
           <div
             class="slds-builder-header__item-label slds-media slds-media_center media_m-left"
@@ -33,9 +209,8 @@
             </div>
           </div>
         </div>
-        <!-- 1.3. header links -->
         <div
-          class="slds-builder-header__item slds-builder-header__utilities header_border-none link_m-right header-link-text color-lightgray font-size-16 slds-grid slds-grid--vertical-align-center"
+          class="slds-builder-header__item slds-builder-header__utilities header_border-none link_m-right header-link-text color-white font-size-16 slds-grid slds-grid--vertical-align-center"
         >
           <li class="slds-builder-header__nav-item slds-show--large">
             <a
@@ -45,6 +220,7 @@
               <div class="slds-media__body">Dashboard</div>
             </a>
           </li>
+
           <li class="slds-builder-header__nav-item slds-m-left--medium">
             <span class="slds-media__body">
               <span
@@ -64,7 +240,7 @@
                 class="slds-icon_container slds-icon-standard-user"
                 title="Description of icon when needed"
               >
-                <svg class="slds-icon avatar-icon_color" aria-hidden="true">
+                <svg class="slds-icon" aria-hidden="true">
                   <use
                     xlink:href="../salesforce-lightning-design-system-2.13.7/assets/icons/standard-sprite/svg/symbols.svg#user"
                   ></use>
@@ -84,7 +260,7 @@
               title="Click to open menu"
             >
               <span class="slds-media__body">
-                <span class="slds-truncate name-text" title="Dropdown"
+                <span class="slds-truncate" title="Dropdown"
                   >Muskan Agarwal</span
                 >
                 <span
@@ -102,15 +278,10 @@
         </div>
       </header>
     </div>
-    <!--
-        ----
-          -------- 2. SIDEBAR -------- 
-        ----
-      -->
-    <div class="sidebar-section">
-      <nav class="slds-nav-vertical sidebar-nav" aria-label="Sidebar">
+    <div class="demo-only" style="width: 20%">
+      <nav class="slds-nav-vertical cd-side-nav" aria-label="Sub page">
         <div class="slds-nav-vertical__section">
-          <ul aria-describedby="sidebar-list">
+          <ul aria-describedby="entity-header">
             <li class="slds-nav-vertical__item sidebar-dropdown">
               <a href="#" class="slds-nav-vertical__action slds-text-title_caps"
                 >Summary
@@ -130,10 +301,7 @@
                 </span>
               </a>
               <div class="sidebar-submenu">
-                <ul
-                  aria-describedby="sidebar-submenu-list"
-                  class="slds-p-left--large"
-                >
+                <ul aria-describedby="entity-header" class="slds-p-left--large">
                   <li class="slds-nav-vertical__item">
                     <a href="#" class="slds-nav-vertical__action">Tax </a>
                   </li>
@@ -187,10 +355,7 @@
                 </span>
               </a>
               <div class="sidebar-submenu">
-                <ul
-                  aria-describedby="sidebar-submenu-list"
-                  class="slds-p-left--large"
-                >
+                <ul aria-describedby="entity-header" class="slds-p-left--large">
                   <li class="slds-nav-vertical__item">
                     <a href="#" class="slds-nav-vertical__action">Tax </a>
                   </li>
@@ -242,10 +407,7 @@
                   </span> </span
               ></a>
               <div class="sidebar-submenu">
-                <ul
-                  aria-describedby="sidebar-submenu-list"
-                  class="slds-p-left--large"
-                >
+                <ul aria-describedby="entity-header" class="slds-p-left--large">
                   <li class="slds-nav-vertical__item">
                     <a href="#" class="slds-nav-vertical__action">Tax </a>
                   </li>
@@ -299,10 +461,7 @@
                 </span>
               </a>
               <div class="sidebar-submenu">
-                <ul
-                  aria-describedby="sidebar-submenu-list"
-                  class="slds-p-left--large"
-                >
+                <ul aria-describedby="entity-header" class="slds-p-left--large">
                   <li class="slds-nav-vertical__item">
                     <a href="#" class="slds-nav-vertical__action">Tax </a>
                   </li>
@@ -337,6 +496,7 @@
                 </ul>
               </div>
             </li>
+
             <li class="slds-nav-vertical__item sidebar-dropdown">
               <a href="#" class="slds-nav-vertical__action slds-text-title_caps"
                 >Delegate
@@ -356,10 +516,7 @@
                 </span>
               </a>
               <div class="sidebar-submenu">
-                <ul
-                  aria-describedby="sidebar-submenu-list"
-                  class="slds-p-left--large"
-                >
+                <ul aria-describedby="entity-header" class="slds-p-left--large">
                   <li class="slds-nav-vertical__item">
                     <a href="#" class="slds-nav-vertical__action">Tax </a>
                   </li>
@@ -396,18 +553,9 @@
             </li>
           </ul>
         </div>
-        <div class="sidebar-copyright-text slds-text-align--center">
-          © 2020 MINIMAL | All Rights Reserved
-        </div>
       </nav>
     </div>
-    <!--
-        ----
-          -------- 3. MAIN SECTION -------- 
-        ----
-      -->
-    <div class="main-section">
-      <!-- 3.1. FILTER BAR -->
+    <div class="">
       <div
         class="slds-show--large slds-m-around--large filter-bar"
         style="width: 80%"
@@ -473,22 +621,8 @@
             <div class="slds-col slds-size--1-of-12">
               <div class="slds-align--absolute-center">
                 <span
-                  class="slds-icon_container slds-icon-utility-announcement filter-bar-items show-table"
-                  title="View Table Layout"
-                >
-                  <svg
-                    class="slds-icon slds-icon-text-default slds-icon--medium slds-p-around--x-small icon-fill_white"
-                    aria-hidden="true"
-                  >
-                    <use
-                      xlink:href="../salesforce-lightning-design-system-2.13.7/assets/icons/utility-sprite/svg/symbols.svg#table"
-                    ></use>
-                  </svg>
-                  <span class="slds-assistive-text">View Table Layout</span>
-                </span>
-                <span
                   class="slds-icon_container slds-icon-utility-announcement filter-bar-items show-card"
-                  title="View Card Layout"
+                  title="Description of icon when needed"
                 >
                   <svg
                     class="slds-icon slds-icon-text-default slds-icon--medium slds-p-around--x-small"
@@ -498,32 +632,50 @@
                       xlink:href="../salesforce-lightning-design-system-2.13.7/assets/icons/utility-sprite/svg/symbols.svg#ad_set"
                     ></use>
                   </svg>
-                  <span class="slds-assistive-text">View Card Layout</span>
+                  <span class="slds-assistive-text"
+                    >Description of icon when needed</span
+                  > </span
+                ><span
+                  class="slds-icon_container slds-icon-utility-announcement filter-bar-items show-table"
+                  title="Description of icon when needed"
+                >
+                  <svg
+                    class="slds-icon slds-icon-text-default slds-icon--medium slds-p-around--x-small"
+                    aria-hidden="true"
+                  >
+                    <use
+                      xlink:href="../salesforce-lightning-design-system-2.13.7/assets/icons/utility-sprite/svg/symbols.svg#table"
+                    ></use>
+                  </svg>
+                  <span class="slds-assistive-text"
+                    >Description of icon when needed</span
+                  >
                 </span>
               </div>
             </div>
             <div class="slds-col slds-size--1-of-12">
               <div class="">
                 <span
-                  class="slds-icon_container slds-icon-utility-open filter-bar-items"
-                  title="Save"
+                  class="slds-icon_container slds-icon-utility-announcement filter-bar-items"
+                  title="Description of icon when needed"
                 >
                   <svg
-                    class="slds-icon slds-icon-text-default slds-icon--medium slds-p-around--x-small save-icon_rotate"
+                    class="slds-icon slds-icon-text-default slds-icon--medium slds-p-around--x-small"
                     aria-hidden="true"
                   >
                     <use
                       xlink:href="../salesforce-lightning-design-system-2.13.7/assets/icons/utility-sprite/svg/symbols.svg#open"
                     ></use>
                   </svg>
-                  <span class="slds-assistive-text">Save</span>
+                  <span class="slds-assistive-text"
+                    >Description of icon when needed</span
+                  >
                 </span>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <!-- 3.2. CARD/TABLE LAYOUT -->
       <div class="container slds-align--absolute-center">
         <div class="slds-grid slds-wrap">
           <div
@@ -741,357 +893,18 @@
               </div>
             </div>
           </div>
-          <div
-            class="outer-col slds-col slds-size_1-of-1 slds-medium-size_6-of-12 slds-large-size--1-of-1 slds-p-around--medium"
-          >
-            <div
-              class="slds-card slds-grid slds-wrap slds-grid--vertical-align-center slds-p-around--medium card-outer_style"
-            >
-              <div
-                class="slds-col slds-size_1-of-1 slds-large-size--1-of-12 slds-align_absolute-center headshot-size slds-order_2 slds-large-order--1"
-              >
-                <span
-                  ><img class="headshot" src="../images/people1.jpeg"
-                /></span>
-              </div>
-              <div
-                class="slds-col slds-size_1-of-1 slds-large-size--3-of-12 slds-align_absolute-center slds-order_3 slds-large-order--2 text_align-left"
-              >
-                <span class="font-size m-top-20">Ivan Magalhães</span>
-              </div>
-              <div
-                class="slds-col slds-size_1-of-1 slds-align_absolute-center desktop-display_none slds-order_4 slds-large-order--2"
-              >
-                <span class="color-light">abcdef@xyz.com</span>
-              </div>
-              <div
-                class="slds-col slds-size_1-of-1 slds-align_absolute-center desktop-display_none slds-order_4 slds-large-order--3"
-              >
-                <span class="color-light m-top-20">Total Contributions</span>
-              </div>
-              <div
-                class="slds-col slds-size_1-of-1 slds-large-size--2-of-12 slds-align_absolute-center slds-show_large slds-order_5 slds-large-order--4 text_align-left"
-              >
-                <span class="font-size">$ 821,243</span>
-              </div>
-              <div
-                class="slds-col slds-size_1-of-1 slds-large-size--2-of-12 slds-align_absolute-center slds-show_large slds-order_5 slds-large-order--5 text_align-left"
-              >
-                <span class="font-size">$ 821,243</span>
-              </div>
-              <div
-                class="slds-col slds-size_1-of-1 slds-large-size--2-of-12 slds-align_absolute-center slds-order_5 slds-large-order--6 text_align-left"
-              >
-                <span class="font-size">$ 821,243</span>
-              </div>
-              <div
-                class="slds-col slds-size_1-of-1 slds-large-size--1-of-12 slds-text-align--center color-lightblue slds-order_6 slds-large-order--7 border-top m-top-20 font-size text_align-left"
-              >
-                <p class="m-top-10">
-                  <span
-                    class="slds-icon_container slds-icon-utility-announcement slds-show_large"
-                    title="Description of icon when needed"
-                  >
-                    <svg
-                      class="slds-icon slds-icon-text-default slds-icon--x-small icon_style"
-                      aria-hidden="true"
-                    >
-                      <use
-                        xlink:href="../salesforce-lightning-design-system-2.13.7/assets/icons/utility-sprite/svg/symbols.svg#open"
-                      ></use>
-                    </svg>
-                    <span class="slds-assistive-text m-top-10"
-                      >View More</span
-                    > </span
-                  >View
-                </p>
-              </div>
-              <div
-                class="slds-col slds-size_1-of-1 slds-large-size--1-of-12 color-lightblue slds-text-align_right slds-order_1 slds-large-order--8"
-              >
-                <span class="slds-m-top--x-small"
-                  ><span
-                    class="slds-icon_container slds-icon-utility-announcement"
-                    title="Description of icon when needed"
-                  >
-                    <svg
-                      class="slds-icon slds-icon-text-default slds-icon--x-small"
-                      aria-hidden="true"
-                    >
-                      <use
-                        xlink:href="../salesforce-lightning-design-system-2.13.7/assets/icons/utility-sprite/svg/symbols.svg#threedots"
-                      ></use>
-                    </svg>
-                    <span class="slds-assistive-text">Expand</span>
-                  </span></span
-                >
-              </div>
-            </div>
-          </div>
-          <div
-            class="outer-col slds-col slds-size_1-of-1 slds-medium-size_6-of-12 slds-large-size--1-of-1 slds-p-around--medium"
-          >
-            <div
-              class="slds-card slds-grid slds-wrap slds-grid--vertical-align-center slds-p-around--medium card-outer_style"
-            >
-              <div
-                class="slds-col slds-size_1-of-1 slds-large-size--1-of-12 slds-align_absolute-center headshot-size slds-order_2 slds-large-order--1"
-              >
-                <span
-                  ><img class="headshot" src="../images/people1.jpeg"
-                /></span>
-              </div>
-              <div
-                class="slds-col slds-size_1-of-1 slds-large-size--3-of-12 slds-align_absolute-center slds-order_3 slds-large-order--2 text_align-left"
-              >
-                <span class="font-size m-top-20">Ivan Magalhães</span>
-              </div>
-              <div
-                class="slds-col slds-size_1-of-1 slds-align_absolute-center desktop-display_none slds-order_4 slds-large-order--2"
-              >
-                <span class="color-light">abcdef@xyz.com</span>
-              </div>
-              <div
-                class="slds-col slds-size_1-of-1 slds-align_absolute-center desktop-display_none slds-order_4 slds-large-order--3"
-              >
-                <span class="color-light m-top-20">Total Contributions</span>
-              </div>
-              <div
-                class="slds-col slds-size_1-of-1 slds-large-size--2-of-12 slds-align_absolute-center slds-show_large slds-order_5 slds-large-order--4 text_align-left"
-              >
-                <span class="font-size">$ 821,243</span>
-              </div>
-              <div
-                class="slds-col slds-size_1-of-1 slds-large-size--2-of-12 slds-align_absolute-center slds-show_large slds-order_5 slds-large-order--5 text_align-left"
-              >
-                <span class="font-size">$ 821,243</span>
-              </div>
-              <div
-                class="slds-col slds-size_1-of-1 slds-large-size--2-of-12 slds-align_absolute-center slds-order_5 slds-large-order--6 text_align-left"
-              >
-                <span class="font-size">$ 821,243</span>
-              </div>
-              <div
-                class="slds-col slds-size_1-of-1 slds-large-size--1-of-12 slds-text-align--center color-lightblue slds-order_6 slds-large-order--7 border-top m-top-20 font-size text_align-left"
-              >
-                <p class="m-top-10">
-                  <span
-                    class="slds-icon_container slds-icon-utility-announcement slds-show_large"
-                    title="Description of icon when needed"
-                  >
-                    <svg
-                      class="slds-icon slds-icon-text-default slds-icon--x-small icon_style"
-                      aria-hidden="true"
-                    >
-                      <use
-                        xlink:href="../salesforce-lightning-design-system-2.13.7/assets/icons/utility-sprite/svg/symbols.svg#open"
-                      ></use>
-                    </svg>
-                    <span class="slds-assistive-text m-top-10"
-                      >View More</span
-                    > </span
-                  >View
-                </p>
-              </div>
-              <div
-                class="slds-col slds-size_1-of-1 slds-large-size--1-of-12 color-lightblue slds-text-align_right slds-order_1 slds-large-order--8"
-              >
-                <span class="slds-m-top--x-small"
-                  ><span
-                    class="slds-icon_container slds-icon-utility-announcement"
-                    title="Description of icon when needed"
-                  >
-                    <svg
-                      class="slds-icon slds-icon-text-default slds-icon--x-small"
-                      aria-hidden="true"
-                    >
-                      <use
-                        xlink:href="../salesforce-lightning-design-system-2.13.7/assets/icons/utility-sprite/svg/symbols.svg#threedots"
-                      ></use>
-                    </svg>
-                    <span class="slds-assistive-text">Expand</span>
-                  </span></span
-                >
-              </div>
-            </div>
-          </div>
-          <div
-            class="outer-col slds-col slds-size_1-of-1 slds-medium-size_6-of-12 slds-large-size--1-of-1 slds-p-around--medium"
-          >
-            <div
-              class="slds-card slds-grid slds-wrap slds-grid--vertical-align-center slds-p-around--medium card-outer_style"
-            >
-              <div
-                class="slds-col slds-size_1-of-1 slds-large-size--1-of-12 slds-align_absolute-center headshot-size slds-order_2 slds-large-order--1"
-              >
-                <span
-                  ><img class="headshot" src="../images/people1.jpeg"
-                /></span>
-              </div>
-              <div
-                class="slds-col slds-size_1-of-1 slds-large-size--3-of-12 slds-align_absolute-center slds-order_3 slds-large-order--2 text_align-left"
-              >
-                <span class="font-size m-top-20">Ivan Magalhães</span>
-              </div>
-              <div
-                class="slds-col slds-size_1-of-1 slds-align_absolute-center desktop-display_none slds-order_4 slds-large-order--2"
-              >
-                <span class="color-light">abcdef@xyz.com</span>
-              </div>
-              <div
-                class="slds-col slds-size_1-of-1 slds-align_absolute-center desktop-display_none slds-order_4 slds-large-order--3"
-              >
-                <span class="color-light m-top-20">Total Contributions</span>
-              </div>
-              <div
-                class="slds-col slds-size_1-of-1 slds-large-size--2-of-12 slds-align_absolute-center slds-show_large slds-order_5 slds-large-order--4 text_align-left"
-              >
-                <span class="font-size">$ 821,243</span>
-              </div>
-              <div
-                class="slds-col slds-size_1-of-1 slds-large-size--2-of-12 slds-align_absolute-center slds-show_large slds-order_5 slds-large-order--5 text_align-left"
-              >
-                <span class="font-size">$ 821,243</span>
-              </div>
-              <div
-                class="slds-col slds-size_1-of-1 slds-large-size--2-of-12 slds-align_absolute-center slds-order_5 slds-large-order--6 text_align-left"
-              >
-                <span class="font-size">$ 821,243</span>
-              </div>
-              <div
-                class="slds-col slds-size_1-of-1 slds-large-size--1-of-12 slds-text-align--center color-lightblue slds-order_6 slds-large-order--7 border-top m-top-20 font-size text_align-left"
-              >
-                <p class="m-top-10">
-                  <span
-                    class="slds-icon_container slds-icon-utility-announcement slds-show_large"
-                    title="Description of icon when needed"
-                  >
-                    <svg
-                      class="slds-icon slds-icon-text-default slds-icon--x-small icon_style"
-                      aria-hidden="true"
-                    >
-                      <use
-                        xlink:href="../salesforce-lightning-design-system-2.13.7/assets/icons/utility-sprite/svg/symbols.svg#open"
-                      ></use>
-                    </svg>
-                    <span class="slds-assistive-text m-top-10"
-                      >View More</span
-                    > </span
-                  >View
-                </p>
-              </div>
-              <div
-                class="slds-col slds-size_1-of-1 slds-large-size--1-of-12 color-lightblue slds-text-align_right slds-order_1 slds-large-order--8"
-              >
-                <span class="slds-m-top--x-small"
-                  ><span
-                    class="slds-icon_container slds-icon-utility-announcement"
-                    title="Description of icon when needed"
-                  >
-                    <svg
-                      class="slds-icon slds-icon-text-default slds-icon--x-small"
-                      aria-hidden="true"
-                    >
-                      <use
-                        xlink:href="../salesforce-lightning-design-system-2.13.7/assets/icons/utility-sprite/svg/symbols.svg#threedots"
-                      ></use>
-                    </svg>
-                    <span class="slds-assistive-text">Expand</span>
-                  </span></span
-                >
-              </div>
-            </div>
-          </div>
-          <div
-            class="outer-col slds-col slds-size_1-of-1 slds-medium-size_6-of-12 slds-large-size--1-of-1 slds-p-around--medium"
-          >
-            <div
-              class="slds-card slds-grid slds-wrap slds-grid--vertical-align-center slds-p-around--medium card-outer_style"
-            >
-              <div
-                class="slds-col slds-size_1-of-1 slds-large-size--1-of-12 slds-align_absolute-center headshot-size slds-order_2 slds-large-order--1"
-              >
-                <span
-                  ><img class="headshot" src="../images/people1.jpeg"
-                /></span>
-              </div>
-              <div
-                class="slds-col slds-size_1-of-1 slds-large-size--3-of-12 slds-align_absolute-center slds-order_3 slds-large-order--2 text_align-left"
-              >
-                <span class="font-size m-top-20">Ivan Magalhães</span>
-              </div>
-              <div
-                class="slds-col slds-size_1-of-1 slds-align_absolute-center desktop-display_none slds-order_4 slds-large-order--2"
-              >
-                <span class="color-light">abcdef@xyz.com</span>
-              </div>
-              <div
-                class="slds-col slds-size_1-of-1 slds-align_absolute-center desktop-display_none slds-order_4 slds-large-order--3"
-              >
-                <span class="color-light m-top-20">Total Contributions</span>
-              </div>
-              <div
-                class="slds-col slds-size_1-of-1 slds-large-size--2-of-12 slds-align_absolute-center slds-show_large slds-order_5 slds-large-order--4 text_align-left"
-              >
-                <span class="font-size">$ 821,243</span>
-              </div>
-              <div
-                class="slds-col slds-size_1-of-1 slds-large-size--2-of-12 slds-align_absolute-center slds-show_large slds-order_5 slds-large-order--5 text_align-left"
-              >
-                <span class="font-size">$ 821,243</span>
-              </div>
-              <div
-                class="slds-col slds-size_1-of-1 slds-large-size--2-of-12 slds-align_absolute-center slds-order_5 slds-large-order--6 text_align-left"
-              >
-                <span class="font-size">$ 821,243</span>
-              </div>
-              <div
-                class="slds-col slds-size_1-of-1 slds-large-size--1-of-12 slds-text-align--center color-lightblue slds-order_6 slds-large-order--7 border-top m-top-20 font-size text_align-left"
-              >
-                <p class="m-top-10">
-                  <span
-                    class="slds-icon_container slds-icon-utility-announcement slds-show_large"
-                    title="Description of icon when needed"
-                  >
-                    <svg
-                      class="slds-icon slds-icon-text-default slds-icon--x-small icon_style"
-                      aria-hidden="true"
-                    >
-                      <use
-                        xlink:href="../salesforce-lightning-design-system-2.13.7/assets/icons/utility-sprite/svg/symbols.svg#open"
-                      ></use>
-                    </svg>
-                    <span class="slds-assistive-text m-top-10"
-                      >View More</span
-                    > </span
-                  >View
-                </p>
-              </div>
-              <div
-                class="slds-col slds-size_1-of-1 slds-large-size--1-of-12 color-lightblue slds-text-align_right slds-order_1 slds-large-order--8"
-              >
-                <span class="slds-m-top--x-small"
-                  ><span
-                    class="slds-icon_container slds-icon-utility-announcement"
-                    title="Description of icon when needed"
-                  >
-                    <svg
-                      class="slds-icon slds-icon-text-default slds-icon--x-small"
-                      aria-hidden="true"
-                    >
-                      <use
-                        xlink:href="../salesforce-lightning-design-system-2.13.7/assets/icons/utility-sprite/svg/symbols.svg#threedots"
-                      ></use>
-                    </svg>
-                    <span class="slds-assistive-text">Expand</span>
-                  </span></span
-                >
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>
   </body>
   <script src="../js/script.js"></script>
+  <script>
+    var sidebar = $('.cd-side-nav'),
+      sidebarTrigger = $('.cd-nav-trigger');
+    //mobile only - open sidebar when user clicks the hamburger menu
+    sidebarTrigger.on('click', function (event) {
+      event.preventDefault();
+      $([sidebar, sidebarTrigger]).toggleClass('nav-is-visible');
+    });
+  </script>
 </html>
