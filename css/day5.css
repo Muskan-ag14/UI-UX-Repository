@@ -211,7 +211,12 @@ a,
   .m-top-10 {
     margin-top: 0px;
   }
-
+  .sidebar-submenu {
+    display: block;
+  }
+  .sidebar-dropdown > a > span {
+    display: none;
+  }
   .border-top {
     border-top: none !important;
   }
