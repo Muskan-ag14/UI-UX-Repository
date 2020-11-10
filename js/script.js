@@ -1,8 +1,16 @@
+function getWidth() {
+  return window.innerWidth > 0
+    ? window.innerWidth
+    : document.documentElement.clientWidth;
+}
+var show_card = false;
+var flag = '1';
 $(document).ready(function () {
   /*
 ------ CARD ON DESKTOP ------
 */
   $('.show-card').click(function () {
+    show_card = true;
     // Display on desktop as card
     $('.outer-col').removeClass('slds-large-size--1-of-1');
     $('.outer-col').addClass('slds-large-size--3-of-12');
@@ -53,6 +61,7 @@ $(document).ready(function () {
 ------ TABLE ON DESKTOP ------
 */
   $('.show-table').click(function () {
+    show_card = false;
     location.reload();
   });
 
@@ -60,10 +69,7 @@ $(document).ready(function () {
 ------ SIDEBAR DROPDOWN ------
 */
   $('.sidebar-dropdown > a').click(function () {
-    var width =
-      window.innerWidth > 0
-        ? window.innerWidth
-        : document.documentElement.clientWidth;
+    var width = getWidth();
     if (width < 1024) {
       $('.sidebar-submenu').slideUp(200);
       if ($(this).parent().hasClass('active')) {
@@ -87,4 +93,18 @@ $(document).ready(function () {
     event.preventDefault();
     $([sidebar, sidebarTrigger]).toggleClass('nav-is-visible');
   });
+});
+
+$(window).resize(function () {
+  var width = getWidth();
+  // console.log(flag !== '2');
+  if (width < 1000) {
+  } else if (width < 1024) {
+    // console.log('here');
+    location.reload();
+    // flag = '2';
+  } else if (width < 1150 && show_card === true) {
+    $('.outer-col').removeClass('slds-large-size--3-of-12');
+    $('.outer-col').addClass('slds-large-size--4-of-12');
+  }
 });
