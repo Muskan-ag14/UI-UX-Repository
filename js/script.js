@@ -108,3 +108,18 @@ $(window).resize(function () {
     $('.outer-col').addClass('slds-large-size--4-of-12');
   }
 });
+
+// fetch data
+fetch('https://reqres.in/api/users?page=2')
+  .then((res) => res.json())
+  .then((res) => {
+    res.data.map((user, i) => {
+      var avatarId = 'img' + (i + 1);
+      var nameId = 'name' + (i + 1);
+      var emailId = 'email' + (i + 1);
+      document.getElementById(nameId).innerHTML =
+        user.first_name + ' ' + user.last_name;
+      document.getElementById(emailId).innerHTML = user.email;
+      document.getElementById(avatarId).src = user.avatar;
+    });
+  });
