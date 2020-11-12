@@ -1,3 +1,6 @@
+/*
+------ VIEWPORT'S WIDTH ------
+*/
 function getWidth() {
   return window.innerWidth > 0
     ? window.innerWidth
@@ -5,6 +8,7 @@ function getWidth() {
 }
 var show_card = false;
 var flag = '1';
+
 $(document).ready(function () {
   /*
 ------ CARD ON DESKTOP ------
@@ -14,7 +18,6 @@ $(document).ready(function () {
     // Display on desktop as card
     $('.outer-col').removeClass('slds-large-size--1-of-1');
     $('.outer-col').addClass('slds-large-size--3-of-12');
-
     $('.outer-col > div > div').removeClass(function (index, css) {
       return (css.match(/(^|\s)slds-large\S+/g) || []).join(' ');
     });
@@ -33,10 +36,8 @@ $(document).ready(function () {
     $('.m-top-10').attr('style', 'margin-top: 1rem !important');
     // Add border to top
     $('.border-top').attr('style', 'border-top: 1px solid #dddbda !important');
-
     //Remove bottom border
     $('.card-outer_style').attr('style', 'border-bottom: none !important');
-
     // change container style
     var currentStyle = $('.container').attr('style') || '';
     $('.container ').attr(
@@ -114,12 +115,16 @@ fetch('https://reqres.in/api/users?page=2')
   .then((res) => res.json())
   .then((res) => {
     res.data.map((user, i) => {
-      var avatarId = 'img' + (i + 1);
-      var nameId = 'name' + (i + 1);
-      var emailId = 'email' + (i + 1);
-      document.getElementById(nameId).innerHTML =
-        user.first_name + ' ' + user.last_name;
-      document.getElementById(emailId).innerHTML = user.email;
-      document.getElementById(avatarId).src = user.avatar;
+      $('#content-div').append(
+        '<div class="outer-col slds-col slds-size_1-of-1 slds-medium-size_6-of-12 slds-large-size--1-of-1 slds-p-around--medium"><div class="slds-card slds-grid slds-wrap slds-grid--vertical-align-center slds-p-around--medium card-outer_style"><div class="slds-col slds-size_1-of-1 slds-large-size--1-of-12 slds-align_absolute-center headshot-size slds-order_2 slds-large-order--1"><span><img id="img6" class="headshot" src="' +
+          user.avatar +
+          '"/></span></div><div class="slds-col slds-size_1-of-1 slds-large-size--3-of-12 slds-align_absolute-center slds-order_3 slds-large-order--2 text_align-left"><span id="name6" class="font-size m-top-20">' +
+          user.first_name +
+          ' ' +
+          user.last_name +
+          '</span></div><div class="slds-col slds-size_1-of-1 slds-align_absolute-center desktop-display_none slds-order_4 slds-large-order--2"><span id="email6" class="color-light">' +
+          user.email +
+          '</span></div><div class="slds-col slds-size_1-of-1 slds-align_absolute-center desktop-display_none slds-order_4 slds-large-order--3"><span class="color-light m-top-20">Total Contributions</span></div><div class="slds-col slds-size_1-of-1 slds-large-size--2-of-12 slds-align_absolute-center slds-show_large slds-order_5 slds-large-order--4 text_align-left"><span class="font-size">$ 821,243</span></div><div class="slds-col slds-size_1-of-1 slds-large-size--2-of-12 slds-align_absolute-center slds-show_large slds-order_5 slds-large-order--5 text_align-left"><span class="font-size">$ 821,243</span></div><div class="slds-col slds-size_1-of-1 slds-large-size--2-of-12 slds-align_absolute-center slds-order_5 slds-large-order--6 text_align-left"><span class="font-size">$ 821,243</span></div><div class="slds-col slds-size_1-of-1 slds-large-size--1-of-12 slds-text-align--center color-lightblue slds-order_6 slds-large-order--7 border-top m-top-20 font-size text_align-left"><p class="m-top-10"><span class="slds-icon_container slds-icon-utility-announcement slds-show_large" title="Description of icon when needed"><svg class="slds-icon slds-icon-text-default slds-icon--x-small icon_style" aria-hidden="true"><use xlink:href="../salesforce-lightning-design-system-2.13.7/assets/icons/utility-sprite/svg/symbols.svg#open"></use></svg><span class="slds-assistive-text m-top-10">View More</span> </span>View</p></div><div class="slds-col slds-size_1-of-1 slds-large-size--1-of-12 color-lightblue slds-text-align_right slds-order_1 slds-large-order--8"><span class="slds-m-top--x-small"><span class="slds-icon_container slds-icon-utility-announcement" title="Description of icon when needed"><svg class="slds-icon slds-icon-text-default slds-icon--x-small" aria-hidden="true"><use xlink:href="../salesforce-lightning-design-system-2.13.7/assets/icons/utility-sprite/svg/symbols.svg#threedots"></use></svg><span class="slds-assistive-text">Expand</span></span></span></div></div></div>'
+      );
     });
   });

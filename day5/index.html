@@ -303,122 +303,121 @@
         class="slds-show--large slds-m-around--large filter-bar"
         style="width: 80%"
       >
-        <div class="slds-show--large">
-          <div class="slds-grid slds-gutters slds-grid--vertical-align-center">
-            <div class="slds-col slds-size--2-of-12 text_align-left">
-              Investor List
-            </div>
-            <div class="slds-col slds-size--4-of-12">
-              <div class="slds-form-element filter-bar-items">
-                <div
-                  class="slds-form-element__control slds-input-has-icon slds-input-has-icon_right"
+        <div
+          class="slds-grid slds-gutters slds-grid--vertical-align-center slds-grid_align-spread"
+          style="position: relative; left: -150px"
+        >
+          <div class="slds-col slds-size--2-of-12">Investor List</div>
+          <div class="slds-col slds-size--4-of-12">
+            <div class="slds-form-element filter-bar-items">
+              <div
+                class="slds-form-element__control slds-input-has-icon slds-input-has-icon_right"
+              >
+                <svg
+                  class="slds-icon slds-input__icon slds-input__icon_right slds-icon-text-default"
+                  aria-hidden="true"
                 >
-                  <svg
-                    class="slds-icon slds-input__icon slds-input__icon_right slds-icon-text-default"
-                    aria-hidden="true"
-                  >
-                    <use
-                      xlink:href="../salesforce-lightning-design-system-2.13.7/assets/icons/utility-sprite/svg/symbols.svg#search"
-                    ></use>
-                  </svg>
-                  <input
-                    type="text"
-                    id="text-input-id-1"
-                    placeholder="Search by Name and Email..."
-                    class="slds-input"
-                  />
+                  <use
+                    xlink:href="../salesforce-lightning-design-system-2.13.7/assets/icons/utility-sprite/svg/symbols.svg#search"
+                  ></use>
+                </svg>
+                <input
+                  type="text"
+                  id="text-input-id-1"
+                  placeholder="Search by Name and Email..."
+                  class="slds-input"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="slds-col slds-size--2-of-12">
+            <div class="slds-form-element filter-bar-items">
+              <div class="slds-form-element__control">
+                <div class="slds-select_container">
+                  <select class="slds-select" id="select-01">
+                    <option value="">Both</option>
+                    <option>All</option>
+                    <option>Individual</option>
+                    <option>IRA</option>
+                    <option>Trust</option>
+                    <option>Joint</option>
+                    <option>Entity</option>
+                  </select>
                 </div>
               </div>
             </div>
-            <div class="slds-col slds-size--2-of-12">
-              <div class="slds-form-element filter-bar-items">
-                <div class="slds-form-element__control">
-                  <div class="slds-select_container">
-                    <select class="slds-select" id="select-01">
-                      <option value="">Both</option>
-                      <option>All</option>
-                      <option>Individual</option>
-                      <option>IRA</option>
-                      <option>Trust</option>
-                      <option>Joint</option>
-                      <option>Entity</option>
-                    </select>
-                  </div>
+          </div>
+          <div class="slds-col slds-size--2-of-12">
+            <div class="slds-form-element filter-bar-items">
+              <div class="slds-form-element__control">
+                <div class="slds-select_container">
+                  <select class="slds-select" id="select-01">
+                    <option value="">All</option>
+                    <option>Individual</option>
+                    <option>IRA</option>
+                    <option>Trust</option>
+                    <option>Joint</option>
+                    <option>Entity</option>
+                  </select>
                 </div>
               </div>
             </div>
-            <div class="slds-col slds-size--2-of-12">
-              <div class="slds-form-element filter-bar-items">
-                <div class="slds-form-element__control">
-                  <div class="slds-select_container">
-                    <select class="slds-select" id="select-01">
-                      <option value="">All</option>
-                      <option>Individual</option>
-                      <option>IRA</option>
-                      <option>Trust</option>
-                      <option>Joint</option>
-                      <option>Entity</option>
-                    </select>
-                  </div>
-                </div>
-              </div>
+          </div>
+          <div class="slds-col slds-size--1-of-12">
+            <div class="slds-align--absolute-center">
+              <span
+                class="slds-icon_container slds-icon-utility-announcement filter-bar-items show-table"
+                title="View Table Layout"
+              >
+                <svg
+                  class="slds-icon slds-icon-text-default slds-icon--medium slds-p-around--x-small icon-fill_white"
+                  aria-hidden="true"
+                >
+                  <use
+                    xlink:href="../salesforce-lightning-design-system-2.13.7/assets/icons/utility-sprite/svg/symbols.svg#table"
+                  ></use>
+                </svg>
+                <span class="slds-assistive-text">View Table Layout</span>
+              </span>
+              <span
+                class="slds-icon_container slds-icon-utility-announcement filter-bar-items show-card"
+                title="View Card Layout"
+              >
+                <svg
+                  class="slds-icon slds-icon-text-default slds-icon--medium slds-p-around--x-small"
+                  aria-hidden="true"
+                >
+                  <use
+                    xlink:href="../salesforce-lightning-design-system-2.13.7/assets/icons/utility-sprite/svg/symbols.svg#ad_set"
+                  ></use>
+                </svg>
+                <span class="slds-assistive-text">View Card Layout</span>
+              </span>
             </div>
-            <div class="slds-col slds-size--1-of-12 slds-grid--align-end">
-              <div class="slds-align--absolute-center">
-                <span
-                  class="slds-icon_container slds-icon-utility-announcement filter-bar-items show-table"
-                  title="View Table Layout"
+          </div>
+          <div class="slds-col slds-size--1-of-12">
+            <div class="">
+              <span
+                class="slds-icon_container slds-icon-utility-open filter-bar-items"
+                title="Save"
+              >
+                <svg
+                  class="slds-icon slds-icon-text-default slds-icon--medium slds-p-around--x-small save-icon_rotate"
+                  aria-hidden="true"
                 >
-                  <svg
-                    class="slds-icon slds-icon-text-default slds-icon--medium slds-p-around--x-small icon-fill_white"
-                    aria-hidden="true"
-                  >
-                    <use
-                      xlink:href="../salesforce-lightning-design-system-2.13.7/assets/icons/utility-sprite/svg/symbols.svg#table"
-                    ></use>
-                  </svg>
-                  <span class="slds-assistive-text">View Table Layout</span>
-                </span>
-                <span
-                  class="slds-icon_container slds-icon-utility-announcement filter-bar-items show-card"
-                  title="View Card Layout"
-                >
-                  <svg
-                    class="slds-icon slds-icon-text-default slds-icon--medium slds-p-around--x-small"
-                    aria-hidden="true"
-                  >
-                    <use
-                      xlink:href="../salesforce-lightning-design-system-2.13.7/assets/icons/utility-sprite/svg/symbols.svg#ad_set"
-                    ></use>
-                  </svg>
-                  <span class="slds-assistive-text">View Card Layout</span>
-                </span>
-              </div>
-            </div>
-            <div class="slds-col slds-size--1-of-12">
-              <div class="">
-                <span
-                  class="slds-icon_container slds-icon-utility-open filter-bar-items"
-                  title="Save"
-                >
-                  <svg
-                    class="slds-icon slds-icon-text-default slds-icon--medium slds-p-around--x-small save-icon_rotate"
-                    aria-hidden="true"
-                  >
-                    <use
-                      xlink:href="../salesforce-lightning-design-system-2.13.7/assets/icons/utility-sprite/svg/symbols.svg#open"
-                    ></use>
-                  </svg>
-                  <span class="slds-assistive-text">Save</span>
-                </span>
-              </div>
+                  <use
+                    xlink:href="../salesforce-lightning-design-system-2.13.7/assets/icons/utility-sprite/svg/symbols.svg#open"
+                  ></use>
+                </svg>
+                <span class="slds-assistive-text">Save</span>
+              </span>
             </div>
           </div>
         </div>
       </div>
       <!-- 3.2. CARD/TABLE LAYOUT -->
       <div class="container slds-align--absolute-center">
-        <div class="slds-grid slds-wrap">
+        <div id="content-div" class="slds-grid slds-wrap">
           <div
             class="slds-col slds-size_1-of-1 slds-medium-size_6-of-12 slds-large-size--1-of-1 slds-p-around--medium slds-show_large"
           >
@@ -458,540 +457,6 @@
               <div
                 class="slds-col slds-size_1-of-1 slds-large-size--1-of-12 color-lightblue slds-text-align_right slds-order_1 slds-large-order--8"
               ></div>
-            </div>
-          </div>
-          <div
-            class="outer-col slds-col slds-size_1-of-1 slds-medium-size_6-of-12 slds-large-size--1-of-1 slds-p-around--medium"
-          >
-            <div
-              class="slds-card slds-grid slds-wrap slds-grid--vertical-align-center slds-p-around--medium card-outer_style"
-            >
-              <div
-                class="slds-col slds-size_1-of-1 slds-large-size--1-of-12 slds-align_absolute-center headshot-size slds-order_2 slds-large-order--1"
-              >
-                <span
-                  ><img id="img1" class="headshot" src="../images/people1.jpeg"
-                /></span>
-              </div>
-              <div
-                class="slds-col slds-size_1-of-1 slds-large-size--3-of-12 slds-align_absolute-center slds-order_3 slds-large-order--2 text_align-left"
-              >
-                <span id="name1" class="font-size m-top-20"
-                  >Ivan Magalhães</span
-                >
-              </div>
-              <div
-                class="slds-col slds-size_1-of-1 slds-align_absolute-center desktop-display_none slds-order_4 slds-large-order--2"
-              >
-                <span id="email1" class="color-light">abcdef@xyz.com</span>
-              </div>
-              <div
-                class="slds-col slds-size_1-of-1 slds-align_absolute-center desktop-display_none slds-order_4 slds-large-order--3"
-              >
-                <span class="color-light m-top-20">Total Contributions</span>
-              </div>
-              <div
-                class="slds-col slds-size_1-of-1 slds-large-size--2-of-12 slds-align_absolute-center slds-show_large slds-order_5 slds-large-order--4 text_align-left"
-              >
-                <span class="font-size">$ 821,243</span>
-              </div>
-              <div
-                class="slds-col slds-size_1-of-1 slds-large-size--2-of-12 slds-align_absolute-center slds-show_large slds-order_5 slds-large-order--5 text_align-left"
-              >
-                <span class="font-size">$ 821,243</span>
-              </div>
-              <div
-                class="slds-col slds-size_1-of-1 slds-large-size--2-of-12 slds-align_absolute-center slds-order_5 slds-large-order--6 text_align-left"
-              >
-                <span class="font-size">$ 821,243</span>
-              </div>
-              <div
-                class="slds-col slds-size_1-of-1 slds-large-size--1-of-12 slds-text-align--center color-lightblue slds-order_6 slds-large-order--7 border-top m-top-20 font-size text_align-left"
-              >
-                <p class="m-top-10">
-                  <span
-                    class="slds-icon_container slds-icon-utility-announcement slds-show_large"
-                    title="Description of icon when needed"
-                  >
-                    <svg
-                      class="slds-icon slds-icon-text-default slds-icon--x-small icon_style"
-                      aria-hidden="true"
-                    >
-                      <use
-                        xlink:href="../salesforce-lightning-design-system-2.13.7/assets/icons/utility-sprite/svg/symbols.svg#open"
-                      ></use>
-                    </svg>
-                    <span class="slds-assistive-text m-top-10"
-                      >View More</span
-                    > </span
-                  >View
-                </p>
-              </div>
-              <div
-                class="slds-col slds-size_1-of-1 slds-large-size--1-of-12 color-lightblue slds-text-align_right slds-order_1 slds-large-order--8"
-              >
-                <span class="slds-m-top--x-small"
-                  ><span
-                    class="slds-icon_container slds-icon-utility-announcement"
-                    title="Description of icon when needed"
-                  >
-                    <svg
-                      class="slds-icon slds-icon-text-default slds-icon--x-small"
-                      aria-hidden="true"
-                    >
-                      <use
-                        xlink:href="../salesforce-lightning-design-system-2.13.7/assets/icons/utility-sprite/svg/symbols.svg#threedots"
-                      ></use>
-                    </svg>
-                    <span class="slds-assistive-text">Expand</span>
-                  </span></span
-                >
-              </div>
-            </div>
-          </div>
-          <div
-            class="outer-col slds-col slds-size_1-of-1 slds-medium-size_6-of-12 slds-large-size--1-of-1 slds-p-around--medium"
-          >
-            <div
-              class="slds-card slds-grid slds-wrap slds-grid--vertical-align-center slds-p-around--medium card-outer_style"
-            >
-              <div
-                class="slds-col slds-size_1-of-1 slds-large-size--1-of-12 slds-align_absolute-center headshot-size slds-order_2 slds-large-order--1"
-              >
-                <span
-                  ><img id="img2" class="headshot" src="../images/people1.jpeg"
-                /></span>
-              </div>
-              <div
-                class="slds-col slds-size_1-of-1 slds-large-size--3-of-12 slds-align_absolute-center slds-order_3 slds-large-order--2 text_align-left"
-              >
-                <span id="name2" class="font-size m-top-20"
-                  >Ivan Magalhães</span
-                >
-              </div>
-              <div
-                class="slds-col slds-size_1-of-1 slds-align_absolute-center desktop-display_none slds-order_4 slds-large-order--2"
-              >
-                <span id="email2" class="color-light">abcdef@xyz.com</span>
-              </div>
-              <div
-                class="slds-col slds-size_1-of-1 slds-align_absolute-center desktop-display_none slds-order_4 slds-large-order--3"
-              >
-                <span class="color-light m-top-20">Total Contributions</span>
-              </div>
-              <div
-                class="slds-col slds-size_1-of-1 slds-large-size--2-of-12 slds-align_absolute-center slds-show_large slds-order_5 slds-large-order--4 text_align-left"
-              >
-                <span class="font-size">$ 821,243</span>
-              </div>
-              <div
-                class="slds-col slds-size_1-of-1 slds-large-size--2-of-12 slds-align_absolute-center slds-show_large slds-order_5 slds-large-order--5 text_align-left"
-              >
-                <span class="font-size">$ 821,243</span>
-              </div>
-              <div
-                class="slds-col slds-size_1-of-1 slds-large-size--2-of-12 slds-align_absolute-center slds-order_5 slds-large-order--6 text_align-left"
-              >
-                <span class="font-size">$ 821,243</span>
-              </div>
-              <div
-                class="slds-col slds-size_1-of-1 slds-large-size--1-of-12 slds-text-align--center color-lightblue slds-order_6 slds-large-order--7 border-top m-top-20 font-size text_align-left"
-              >
-                <p class="m-top-10">
-                  <span
-                    class="slds-icon_container slds-icon-utility-announcement slds-show_large"
-                    title="Description of icon when needed"
-                  >
-                    <svg
-                      class="slds-icon slds-icon-text-default slds-icon--x-small icon_style"
-                      aria-hidden="true"
-                    >
-                      <use
-                        xlink:href="../salesforce-lightning-design-system-2.13.7/assets/icons/utility-sprite/svg/symbols.svg#open"
-                      ></use>
-                    </svg>
-                    <span class="slds-assistive-text m-top-10"
-                      >View More</span
-                    > </span
-                  >View
-                </p>
-              </div>
-              <div
-                class="slds-col slds-size_1-of-1 slds-large-size--1-of-12 color-lightblue slds-text-align_right slds-order_1 slds-large-order--8"
-              >
-                <span class="slds-m-top--x-small"
-                  ><span
-                    class="slds-icon_container slds-icon-utility-announcement"
-                    title="Description of icon when needed"
-                  >
-                    <svg
-                      class="slds-icon slds-icon-text-default slds-icon--x-small"
-                      aria-hidden="true"
-                    >
-                      <use
-                        xlink:href="../salesforce-lightning-design-system-2.13.7/assets/icons/utility-sprite/svg/symbols.svg#threedots"
-                      ></use>
-                    </svg>
-                    <span class="slds-assistive-text">Expand</span>
-                  </span></span
-                >
-              </div>
-            </div>
-          </div>
-          <div
-            class="outer-col slds-col slds-size_1-of-1 slds-medium-size_6-of-12 slds-large-size--1-of-1 slds-p-around--medium"
-          >
-            <div
-              class="slds-card slds-grid slds-wrap slds-grid--vertical-align-center slds-p-around--medium card-outer_style"
-            >
-              <div
-                class="slds-col slds-size_1-of-1 slds-large-size--1-of-12 slds-align_absolute-center headshot-size slds-order_2 slds-large-order--1"
-              >
-                <span
-                  ><img id="img3" class="headshot" src="../images/people1.jpeg"
-                /></span>
-              </div>
-              <div
-                class="slds-col slds-size_1-of-1 slds-large-size--3-of-12 slds-align_absolute-center slds-order_3 slds-large-order--2 text_align-left"
-              >
-                <span id="name3" class="font-size m-top-20"
-                  >Ivan Magalhães</span
-                >
-              </div>
-              <div
-                class="slds-col slds-size_1-of-1 slds-align_absolute-center desktop-display_none slds-order_4 slds-large-order--2"
-              >
-                <span id="email3" class="color-light">abcdef@xyz.com</span>
-              </div>
-              <div
-                class="slds-col slds-size_1-of-1 slds-align_absolute-center desktop-display_none slds-order_4 slds-large-order--3"
-              >
-                <span class="color-light m-top-20">Total Contributions</span>
-              </div>
-              <div
-                class="slds-col slds-size_1-of-1 slds-large-size--2-of-12 slds-align_absolute-center slds-show_large slds-order_5 slds-large-order--4 text_align-left"
-              >
-                <span class="font-size">$ 821,243</span>
-              </div>
-              <div
-                class="slds-col slds-size_1-of-1 slds-large-size--2-of-12 slds-align_absolute-center slds-show_large slds-order_5 slds-large-order--5 text_align-left"
-              >
-                <span class="font-size">$ 821,243</span>
-              </div>
-              <div
-                class="slds-col slds-size_1-of-1 slds-large-size--2-of-12 slds-align_absolute-center slds-order_5 slds-large-order--6 text_align-left"
-              >
-                <span class="font-size">$ 821,243</span>
-              </div>
-              <div
-                class="slds-col slds-size_1-of-1 slds-large-size--1-of-12 slds-text-align--center color-lightblue slds-order_6 slds-large-order--7 border-top m-top-20 font-size text_align-left"
-              >
-                <p class="m-top-10">
-                  <span
-                    class="slds-icon_container slds-icon-utility-announcement slds-show_large"
-                    title="Description of icon when needed"
-                  >
-                    <svg
-                      class="slds-icon slds-icon-text-default slds-icon--x-small icon_style"
-                      aria-hidden="true"
-                    >
-                      <use
-                        xlink:href="../salesforce-lightning-design-system-2.13.7/assets/icons/utility-sprite/svg/symbols.svg#open"
-                      ></use>
-                    </svg>
-                    <span class="slds-assistive-text m-top-10"
-                      >View More</span
-                    > </span
-                  >View
-                </p>
-              </div>
-              <div
-                class="slds-col slds-size_1-of-1 slds-large-size--1-of-12 color-lightblue slds-text-align_right slds-order_1 slds-large-order--8"
-              >
-                <span class="slds-m-top--x-small"
-                  ><span
-                    class="slds-icon_container slds-icon-utility-announcement"
-                    title="Description of icon when needed"
-                  >
-                    <svg
-                      class="slds-icon slds-icon-text-default slds-icon--x-small"
-                      aria-hidden="true"
-                    >
-                      <use
-                        xlink:href="../salesforce-lightning-design-system-2.13.7/assets/icons/utility-sprite/svg/symbols.svg#threedots"
-                      ></use>
-                    </svg>
-                    <span class="slds-assistive-text">Expand</span>
-                  </span></span
-                >
-              </div>
-            </div>
-          </div>
-          <div
-            class="outer-col slds-col slds-size_1-of-1 slds-medium-size_6-of-12 slds-large-size--1-of-1 slds-p-around--medium"
-          >
-            <div
-              class="slds-card slds-grid slds-wrap slds-grid--vertical-align-center slds-p-around--medium card-outer_style"
-            >
-              <div
-                class="slds-col slds-size_1-of-1 slds-large-size--1-of-12 slds-align_absolute-center headshot-size slds-order_2 slds-large-order--1"
-              >
-                <span
-                  ><img id="img4" class="headshot" src="../images/people1.jpeg"
-                /></span>
-              </div>
-              <div
-                class="slds-col slds-size_1-of-1 slds-large-size--3-of-12 slds-align_absolute-center slds-order_3 slds-large-order--2 text_align-left"
-              >
-                <span id="name4" class="font-size m-top-20"
-                  >Ivan Magalhães</span
-                >
-              </div>
-              <div
-                class="slds-col slds-size_1-of-1 slds-align_absolute-center desktop-display_none slds-order_4 slds-large-order--2"
-              >
-                <span id="email4" class="color-light">abcdef@xyz.com</span>
-              </div>
-              <div
-                class="slds-col slds-size_1-of-1 slds-align_absolute-center desktop-display_none slds-order_4 slds-large-order--3"
-              >
-                <span class="color-light m-top-20">Total Contributions</span>
-              </div>
-              <div
-                class="slds-col slds-size_1-of-1 slds-large-size--2-of-12 slds-align_absolute-center slds-show_large slds-order_5 slds-large-order--4 text_align-left"
-              >
-                <span class="font-size">$ 821,243</span>
-              </div>
-              <div
-                class="slds-col slds-size_1-of-1 slds-large-size--2-of-12 slds-align_absolute-center slds-show_large slds-order_5 slds-large-order--5 text_align-left"
-              >
-                <span class="font-size">$ 821,243</span>
-              </div>
-              <div
-                class="slds-col slds-size_1-of-1 slds-large-size--2-of-12 slds-align_absolute-center slds-order_5 slds-large-order--6 text_align-left"
-              >
-                <span class="font-size">$ 821,243</span>
-              </div>
-              <div
-                class="slds-col slds-size_1-of-1 slds-large-size--1-of-12 slds-text-align--center color-lightblue slds-order_6 slds-large-order--7 border-top m-top-20 font-size text_align-left"
-              >
-                <p class="m-top-10">
-                  <span
-                    class="slds-icon_container slds-icon-utility-announcement slds-show_large"
-                    title="Description of icon when needed"
-                  >
-                    <svg
-                      class="slds-icon slds-icon-text-default slds-icon--x-small icon_style"
-                      aria-hidden="true"
-                    >
-                      <use
-                        xlink:href="../salesforce-lightning-design-system-2.13.7/assets/icons/utility-sprite/svg/symbols.svg#open"
-                      ></use>
-                    </svg>
-                    <span class="slds-assistive-text m-top-10"
-                      >View More</span
-                    > </span
-                  >View
-                </p>
-              </div>
-              <div
-                class="slds-col slds-size_1-of-1 slds-large-size--1-of-12 color-lightblue slds-text-align_right slds-order_1 slds-large-order--8"
-              >
-                <span class="slds-m-top--x-small"
-                  ><span
-                    class="slds-icon_container slds-icon-utility-announcement"
-                    title="Description of icon when needed"
-                  >
-                    <svg
-                      class="slds-icon slds-icon-text-default slds-icon--x-small"
-                      aria-hidden="true"
-                    >
-                      <use
-                        xlink:href="../salesforce-lightning-design-system-2.13.7/assets/icons/utility-sprite/svg/symbols.svg#threedots"
-                      ></use>
-                    </svg>
-                    <span class="slds-assistive-text">Expand</span>
-                  </span></span
-                >
-              </div>
-            </div>
-          </div>
-          <div
-            class="outer-col slds-col slds-size_1-of-1 slds-medium-size_6-of-12 slds-large-size--1-of-1 slds-p-around--medium"
-          >
-            <div
-              class="slds-card slds-grid slds-wrap slds-grid--vertical-align-center slds-p-around--medium card-outer_style"
-            >
-              <div
-                class="slds-col slds-size_1-of-1 slds-large-size--1-of-12 slds-align_absolute-center headshot-size slds-order_2 slds-large-order--1"
-              >
-                <span
-                  ><img id="img5" class="headshot" src="../images/people1.jpeg"
-                /></span>
-              </div>
-              <div
-                class="slds-col slds-size_1-of-1 slds-large-size--3-of-12 slds-align_absolute-center slds-order_3 slds-large-order--2 text_align-left"
-              >
-                <span id="name5" class="font-size m-top-20"
-                  >Ivan Magalhães</span
-                >
-              </div>
-              <div
-                class="slds-col slds-size_1-of-1 slds-align_absolute-center desktop-display_none slds-order_4 slds-large-order--2"
-              >
-                <span id="email5" class="color-light">abcdef@xyz.com</span>
-              </div>
-              <div
-                class="slds-col slds-size_1-of-1 slds-align_absolute-center desktop-display_none slds-order_4 slds-large-order--3"
-              >
-                <span class="color-light m-top-20">Total Contributions</span>
-              </div>
-              <div
-                class="slds-col slds-size_1-of-1 slds-large-size--2-of-12 slds-align_absolute-center slds-show_large slds-order_5 slds-large-order--4 text_align-left"
-              >
-                <span class="font-size">$ 821,243</span>
-              </div>
-              <div
-                class="slds-col slds-size_1-of-1 slds-large-size--2-of-12 slds-align_absolute-center slds-show_large slds-order_5 slds-large-order--5 text_align-left"
-              >
-                <span class="font-size">$ 821,243</span>
-              </div>
-              <div
-                class="slds-col slds-size_1-of-1 slds-large-size--2-of-12 slds-align_absolute-center slds-order_5 slds-large-order--6 text_align-left"
-              >
-                <span class="font-size">$ 821,243</span>
-              </div>
-              <div
-                class="slds-col slds-size_1-of-1 slds-large-size--1-of-12 slds-text-align--center color-lightblue slds-order_6 slds-large-order--7 border-top m-top-20 font-size text_align-left"
-              >
-                <p class="m-top-10">
-                  <span
-                    class="slds-icon_container slds-icon-utility-announcement slds-show_large"
-                    title="Description of icon when needed"
-                  >
-                    <svg
-                      class="slds-icon slds-icon-text-default slds-icon--x-small icon_style"
-                      aria-hidden="true"
-                    >
-                      <use
-                        xlink:href="../salesforce-lightning-design-system-2.13.7/assets/icons/utility-sprite/svg/symbols.svg#open"
-                      ></use>
-                    </svg>
-                    <span class="slds-assistive-text m-top-10"
-                      >View More</span
-                    > </span
-                  >View
-                </p>
-              </div>
-              <div
-                class="slds-col slds-size_1-of-1 slds-large-size--1-of-12 color-lightblue slds-text-align_right slds-order_1 slds-large-order--8"
-              >
-                <span class="slds-m-top--x-small"
-                  ><span
-                    class="slds-icon_container slds-icon-utility-announcement"
-                    title="Description of icon when needed"
-                  >
-                    <svg
-                      class="slds-icon slds-icon-text-default slds-icon--x-small"
-                      aria-hidden="true"
-                    >
-                      <use
-                        xlink:href="../salesforce-lightning-design-system-2.13.7/assets/icons/utility-sprite/svg/symbols.svg#threedots"
-                      ></use>
-                    </svg>
-                    <span class="slds-assistive-text">Expand</span>
-                  </span></span
-                >
-              </div>
-            </div>
-          </div>
-          <div
-            class="outer-col slds-col slds-size_1-of-1 slds-medium-size_6-of-12 slds-large-size--1-of-1 slds-p-around--medium"
-          >
-            <div
-              class="slds-card slds-grid slds-wrap slds-grid--vertical-align-center slds-p-around--medium card-outer_style"
-            >
-              <div
-                class="slds-col slds-size_1-of-1 slds-large-size--1-of-12 slds-align_absolute-center headshot-size slds-order_2 slds-large-order--1"
-              >
-                <span
-                  ><img id="img6" class="headshot" src="../images/people1.jpeg"
-                /></span>
-              </div>
-              <div
-                class="slds-col slds-size_1-of-1 slds-large-size--3-of-12 slds-align_absolute-center slds-order_3 slds-large-order--2 text_align-left"
-              >
-                <span id="name6" class="font-size m-top-20"
-                  >Ivan Magalhães</span
-                >
-              </div>
-              <div
-                class="slds-col slds-size_1-of-1 slds-align_absolute-center desktop-display_none slds-order_4 slds-large-order--2"
-              >
-                <span id="email6" class="color-light">abcdef@xyz.com</span>
-              </div>
-              <div
-                class="slds-col slds-size_1-of-1 slds-align_absolute-center desktop-display_none slds-order_4 slds-large-order--3"
-              >
-                <span class="color-light m-top-20">Total Contributions</span>
-              </div>
-              <div
-                class="slds-col slds-size_1-of-1 slds-large-size--2-of-12 slds-align_absolute-center slds-show_large slds-order_5 slds-large-order--4 text_align-left"
-              >
-                <span class="font-size">$ 821,243</span>
-              </div>
-              <div
-                class="slds-col slds-size_1-of-1 slds-large-size--2-of-12 slds-align_absolute-center slds-show_large slds-order_5 slds-large-order--5 text_align-left"
-              >
-                <span class="font-size">$ 821,243</span>
-              </div>
-              <div
-                class="slds-col slds-size_1-of-1 slds-large-size--2-of-12 slds-align_absolute-center slds-order_5 slds-large-order--6 text_align-left"
-              >
-                <span class="font-size">$ 821,243</span>
-              </div>
-              <div
-                class="slds-col slds-size_1-of-1 slds-large-size--1-of-12 slds-text-align--center color-lightblue slds-order_6 slds-large-order--7 border-top m-top-20 font-size text_align-left"
-              >
-                <p class="m-top-10">
-                  <span
-                    class="slds-icon_container slds-icon-utility-announcement slds-show_large"
-                    title="Description of icon when needed"
-                  >
-                    <svg
-                      class="slds-icon slds-icon-text-default slds-icon--x-small icon_style"
-                      aria-hidden="true"
-                    >
-                      <use
-                        xlink:href="../salesforce-lightning-design-system-2.13.7/assets/icons/utility-sprite/svg/symbols.svg#open"
-                      ></use>
-                    </svg>
-                    <span class="slds-assistive-text m-top-10"
-                      >View More</span
-                    > </span
-                  >View
-                </p>
-              </div>
-              <div
-                class="slds-col slds-size_1-of-1 slds-large-size--1-of-12 color-lightblue slds-text-align_right slds-order_1 slds-large-order--8"
-              >
-                <span class="slds-m-top--x-small"
-                  ><span
-                    class="slds-icon_container slds-icon-utility-announcement"
-                    title="Description of icon when needed"
-                  >
-                    <svg
-                      class="slds-icon slds-icon-text-default slds-icon--x-small"
-                      aria-hidden="true"
-                    >
-                      <use
-                        xlink:href="../salesforce-lightning-design-system-2.13.7/assets/icons/utility-sprite/svg/symbols.svg#threedots"
-                      ></use>
-                    </svg>
-                    <span class="slds-assistive-text">Expand</span>
-                  </span></span
-                >
-              </div>
             </div>
           </div>
         </div>
