@@ -32,7 +32,9 @@ a,
     HEADER STYLE
 ***/
 .header-background {
-  position: static !important;
+  position: sticky;
+  top: 0px;
+  z-index: 500;
 }
 .header-height {
   background: rgb(252, 252, 252);
@@ -156,19 +158,6 @@ a,
   position: absolute;
   bottom: 20px;
 }
-@media only screen and (min-width: 1024px) {
-  .sidebar-nav {
-    position: relative;
-    float: left;
-    top: auto;
-    width: 200px;
-    min-height: 100vh;
-    padding-top: 20px;
-    visibility: visible;
-    opacity: 1;
-  }
-}
-
 /***
   CARD AND TABLE STYLE
 ***/
@@ -199,9 +188,7 @@ a,
   border-top: 1px solid #dddbda !important;
 }
 @media (min-width: 1024px) {
-  html {
-    font-size: 14px;
-  }
+  html,
   .font-size {
     font-size: 14px;
   }
@@ -212,10 +199,20 @@ a,
     margin-top: 0px;
   }
   .sidebar-submenu {
-    display: block;
+    display: block !important;
   }
   .sidebar-dropdown > a > span {
     display: none;
+  }
+  .sidebar-nav {
+    position: relative;
+    float: left;
+    top: auto;
+    width: 200px;
+    min-height: 100vh;
+    padding-top: 20px;
+    visibility: visible;
+    opacity: 1;
   }
   .border-top {
     border-top: none !important;
@@ -264,12 +261,9 @@ a,
     background: rgb(255, 255, 255);
     border-radius: 0px;
     box-shadow: 2px 2px 30px 2px rgba(0, 0, 0, 0.08);
-    /* height: 40px; */
   }
   .filter-bar-items > div > input,
   .filter-bar-items > div > div > select {
-    /* position: relative;
-    top: 6px; */
     border: none;
   }
   *:focus {
